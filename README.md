@@ -212,12 +212,12 @@ Your site is published at `https://<user>.github.io/<repo>/`. All asset paths ar
 
 ## 9. SEO checklist
 
-The site is live at **https://anumanuel.github.io/anush-portfolio/**, and that URL is already set in:
+The site is live at **https://anumanuel.github.io/portfolio-design/**, and that URL is already set in:
 - `index.html`: `<link rel="canonical">`, `og:url`, `og:image`, `twitter:image`, JSON-LD `url`
 - `robots.txt` and `sitemap.xml`
-- `404.html` (its links use the `/anush-portfolio/` path)
+- `404.html` (its links use the `/portfolio-design/` path)
 
-If you move to a custom domain or another host, search for `anumanuel.github.io/anush-portfolio` and replace it everywhere, and change `/anush-portfolio/` in `404.html` to `/`.
+If you move to a custom domain or another host, search for `anumanuel.github.io/portfolio-design` and replace it everywhere, and change `/portfolio-design/` in `404.html` to `/`.
 
 `assets/images/og-image.jpg` (1200 × 630) is the link-preview image. Regenerate it whenever the hero changes.
 

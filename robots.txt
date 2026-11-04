@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # Live site on GitHub Pages
-Sitemap: https://anumanuel.github.io/anush-portfolio/sitemap.xml
+Sitemap: https://anumanuel.github.io/portfolio-design/sitemap.xml
