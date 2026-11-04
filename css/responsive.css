@@ -1,0 +1,944 @@
+/* ==========================================================================
+   RESPONSIVE — the sketchbook adapts rather than shrinks
+   ≥1281  desktop / large desktop (base styles)
+   ≤1280  laptop
+   ≤1100  small laptop / tablet landscape
+   ≤899   "pocket sketchbook": stacked pages, contents panel, corner dock
+   ≤599   phones
+   ≤360   small phones
+   + short-height tweaks for landscape laptops & phones
+   ========================================================================== */
+
+@media (min-width: 1700px) {
+  :root {
+    --gutter: clamp(76px, 5vw, 120px);
+  }
+
+  .scene__inner {
+    padding-inline: max(var(--gutter), calc((100vw - 1680px) / 2));
+  }
+}
+
+@media (max-width: 1280px) {
+  .chapters__list a {
+    padding: 10px 9px;
+    font-size: .88rem;
+  }
+
+  .about {
+    grid-template-columns: minmax(0, .78fr) minmax(0, 1.1fr) minmax(0, 1fr);
+  }
+
+  .interests__list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    row-gap: 4px;
+  }
+
+  .projects--b {
+    grid-template-columns: minmax(0, 1fr) minmax(0, .6fr) minmax(0, 1.2fr);
+  }
+}
+
+@media (max-width: 1100px) {
+  :root {
+    --gutter: clamp(20px, 3.6vw, 40px);
+  }
+
+  .brand__tag {
+    display: none;
+  }
+
+  .chapters__num {
+    display: none;
+  }
+
+  .intro {
+    grid-template-columns: minmax(0, 1.25fr) minmax(0, .85fr);
+  }
+
+  .portrait__note {
+    right: -6%;
+  }
+
+  /* About becomes 2 columns + a row of side notes */
+  .about {
+    grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+    align-items: start;
+  }
+
+  .about__side {
+    grid-column: 1 / -1;
+    grid-template-columns: 1.1fr 1fr 1fr;
+    max-width: none;
+    align-items: start;
+  }
+
+  .interests__list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .toolbox__head {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .toolbox__intro {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .legend {
+    grid-row: 1;
+    grid-column: 2;
+  }
+
+  .tool {
+    font-size: .82rem;
+    padding: 6px 10px;
+  }
+
+  .projects--a {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  .project--polaroid,
+  .project--postcard {
+    grid-template-columns: 1fr;
+  }
+
+  .project--polaroid .project__img img,
+  .project--postcard .project__img img {
+    aspect-ratio: 16 / 10;
+    height: auto;
+    min-height: 0;
+  }
+
+  .project--postcard .project__body {
+    border-left: 0;
+    padding-left: 0;
+    border-top: 1.5px dashed rgba(36, 35, 31, .25);
+    padding-top: 10px;
+  }
+
+  .project--feature .project__aside {
+    display: none;
+  }
+
+  .milestone__card {
+    padding: 12px;
+  }
+
+  .milestone__card h3 {
+    font-size: .9rem;
+  }
+
+  .milestone__card p:last-child {
+    font-size: .76rem;
+  }
+
+  .contact {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  }
+
+  .postcard__postmark {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   POCKET SKETCHBOOK (≤ 899px) — tablets in portrait & phones
+   ========================================================================== */
+@media (max-width: 899px) {
+  :root {
+    --top: 62px;
+    --bottom: 74px;
+    --gutter: clamp(18px, 5vw, 40px);
+  }
+
+  /* --- top bar: brand · status · contents --- */
+  .topbar {
+    gap: 12px;
+    background: linear-gradient(to bottom, var(--paper) 55%, rgba(246, 241, 231, 0));
+  }
+
+  .brand__name {
+    font-size: 1.65rem;
+  }
+
+  .topbar__status {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-left: auto;
+    position: relative;
+    z-index: 2;
+  }
+
+  .topbar__num {
+    font: 600 .82rem/1 var(--font-display);
+    color: var(--orange-ink);
+  }
+
+  .topbar__title {
+    font: 600 1.25rem/1 var(--font-hand);
+    color: var(--ink-soft);
+  }
+
+  .toc-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    position: relative;
+    z-index: 2;
+    min-height: 44px;
+    padding: 8px 14px;
+    font: 600 .85rem/1 var(--font-display);
+    background: var(--paper-card);
+    border: 1.5px solid var(--ink);
+    border-radius: 18px 12px 20px 14px / 12px 20px 14px 18px;
+    box-shadow: 2px 2px 0 rgba(36, 35, 31, .18);
+  }
+
+  .toc-toggle .ico {
+    width: 18px;
+    height: 18px;
+  }
+
+  .brand {
+    position: relative;
+    z-index: 2;
+  }
+
+  /* --- chapters become a "contents" page --- */
+  .chapters {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    padding: calc(var(--top) + 26px) var(--gutter) 40px;
+    background: var(--paper) var(--grain);
+    display: grid;
+    align-content: start;
+    overflow-y: auto;
+    visibility: hidden;
+    opacity: 0;
+    translate: 0 -12px;
+    transition: opacity .3s var(--ease-out), translate .4s var(--ease-out), visibility 0s .4s;
+  }
+
+  .chapters.is-open {
+    visibility: visible;
+    opacity: 1;
+    translate: 0 0;
+    transition: opacity .3s var(--ease-out), translate .4s var(--ease-out), visibility 0s;
+  }
+
+  .chapters__heading {
+    display: block;
+    font: 700 clamp(2.4rem, 10vw, 3.4rem)/1 var(--font-display);
+    letter-spacing: -.04em;
+    margin-bottom: 14px;
+  }
+
+  .chapters__list {
+    flex-direction: column;
+    gap: 0;
+    max-width: 560px;
+  }
+
+  .chapters__list a {
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    align-items: baseline;
+    padding: 16px 2px;
+    font-size: 1.15rem;
+    font-weight: 500;
+    border-bottom: 1.5px dashed rgba(36, 35, 31, .2);
+  }
+
+  .chapters__list a:hover {
+    transform: translateX(4px);
+  }
+
+  .chapters__num {
+    display: inline;
+    font-size: .8rem;
+  }
+
+  .chapters__label {
+    display: none;
+  }
+
+  .chapters__long {
+    display: inline;
+  }
+
+  .chapters__marker {
+    display: none;
+  }
+
+  .chapters__list a[aria-current="true"] .chapters__long {
+    background: linear-gradient(var(--hl-yellow), var(--hl-yellow)) 0 85% / 100% .45em no-repeat;
+  }
+
+  .chapters__foot {
+    display: block;
+    margin-top: 26px;
+    font-size: 1.3rem;
+    color: var(--pencil);
+  }
+
+  /* --- dock splits into two corner buttons; the route runs between --- */
+  .dock {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: var(--bottom);
+    padding: 0 max(12px, env(safe-area-inset-left)) 0 max(12px, env(safe-area-inset-right));
+    justify-content: space-between;
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    pointer-events: none;
+  }
+
+  .dock__btn {
+    pointer-events: auto;
+    width: 48px;
+    height: 48px;
+    background: var(--paper-card);
+    box-shadow: var(--shadow-paper);
+  }
+
+  .dock__status {
+    display: none;
+  }
+
+  /* --- pages stack their content and scroll vertically when needed --- */
+  .scene__inner {
+    padding: calc(var(--top) + 6px) var(--gutter) calc(var(--bottom) + 18px);
+  }
+
+  .intro,
+  .about,
+  .toolbox,
+  .projects,
+  .journey,
+  .contact {
+    align-content: start;
+  }
+
+  .scene-title {
+    font-size: clamp(2rem, 7.4vw, 3rem);
+  }
+
+  /* 01 intro */
+  .intro {
+    grid-template-columns: 1fr;
+    row-gap: 8px;
+  }
+
+  .intro__copy {
+    max-width: 640px;
+  }
+
+  .hero-title {
+    font-size: clamp(2.3rem, 9.6vw, 4.4rem);
+  }
+
+  .intro__art {
+    height: auto;
+    width: min(100%, 440px);
+    aspect-ratio: 1 / .92;
+    margin-top: 18px;
+  }
+
+  .portrait {
+    width: 52%;
+    left: 22%;
+    top: 10%;
+  }
+
+  .sticky--intro {
+    width: 40%;
+    left: -2%;
+    top: 2%;
+  }
+
+  .portrait__note {
+    right: -2%;
+    top: 50%;
+    max-width: 28%;
+  }
+
+  .hint {
+    position: static;
+    transform: none;
+    margin: 24px auto 0;
+    justify-content: center;
+  }
+
+  .hint.is-hidden {
+    transform: none;
+  }
+
+  /* 02 about */
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  .about__story {
+    order: -1;
+    max-width: 640px;
+  }
+
+  .about__photo {
+    width: min(78%, 330px);
+    margin-top: 8px;
+  }
+
+  .about__side {
+    grid-template-columns: 1fr;
+    max-width: 560px;
+  }
+
+  .interests__list {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .sticky--facts {
+    margin: 6px 4px 0;
+  }
+
+  /* 03 toolbox */
+  .toolbox__head {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .legend {
+    grid-row: auto;
+    grid-column: auto;
+    justify-self: start;
+    transform: rotate(-1deg);
+  }
+
+  .legend ul {
+    grid-auto-flow: column;
+    gap: 14px;
+  }
+
+  .kits {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 34px;
+  }
+
+  .kit--creative {
+    grid-column: 1 / -1;
+  }
+
+  /* 04 projects: one card per row */
+  .projects--a,
+  .projects--b {
+    grid-template-columns: 1fr;
+    grid-template-areas: none;
+    row-gap: 46px;
+  }
+
+  .projects__head,
+  .project,
+  .annot--back {
+    grid-area: auto;
+  }
+
+  .project {
+    justify-self: center !important;
+    width: min(100%, 560px) !important;
+    max-width: 560px;
+    min-width: 0;
+  }
+
+  .project--polaroid,
+  .project--postcard {
+    grid-template-columns: 1fr;
+  }
+
+  .project--phone .phone-frame {
+    width: min(56vw, 230px);
+  }
+
+  .project__aside {
+    display: none;
+  }
+
+  .projects__head {
+    margin-bottom: 4px;
+  }
+
+  /* 05 journey: the road turns vertical */
+  .milestones {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding-left: 6px;
+  }
+
+  .milestone {
+    grid-template-rows: auto;
+    grid-template-columns: 56px minmax(0, 1fr);
+    justify-items: stretch;
+    align-items: center;
+    column-gap: 14px;
+  }
+
+  .milestone__pin {
+    grid-row: 1;
+    grid-column: 1;
+    align-self: center !important;
+    justify-self: center;
+  }
+
+  .milestone--up .milestone__pin {
+    translate: -6px 0;
+  }
+
+  .milestone--down .milestone__pin {
+    translate: 6px 0;
+  }
+
+  .milestone__card {
+    grid-row: 1 !important;
+    grid-column: 2;
+    align-self: center !important;
+    width: 100% !important;
+    margin: 0 !important;
+    max-width: 520px;
+  }
+
+  .milestone--up .milestone__card {
+    transform: rotate(-.8deg);
+  }
+
+  .milestone--down .milestone__card {
+    transform: rotate(.8deg);
+  }
+
+  .milestone__card h3 {
+    font-size: 1rem;
+  }
+
+  .milestone__card p:last-child {
+    font-size: .84rem;
+  }
+
+  .road__edge {
+    stroke-width: 18;
+  }
+
+  .road__fill {
+    stroke-width: 14;
+  }
+
+  .snail {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    margin: 18px 0 0 auto;
+    display: block;
+  }
+
+  .secret {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    margin: 10px 0 0 auto;
+  }
+
+  /* 06 contact */
+  .contact {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .letter,
+  .postcard {
+    justify-self: center;
+    max-width: 620px;
+  }
+
+  .the-end {
+    position: static;
+    transform: none;
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+
+/* ==========================================================================
+   PHONES (≤ 599px)
+   ========================================================================== */
+@media (max-width: 599px) {
+  :root {
+    --top: 58px;
+    --bottom: 70px;
+    --gutter: 16px;
+  }
+
+  .brand__name {
+    font-size: 1.5rem;
+  }
+
+  .topbar__title {
+    font-size: 1.15rem;
+  }
+
+  .toc-toggle span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+
+  .toc-toggle {
+    padding: 8px 11px;
+  }
+
+  .intro__hey {
+    font-size: 1.35rem;
+  }
+
+  .intro__hey .ico--curl {
+    display: none;
+  }
+
+  .hero-title {
+    font-size: clamp(2.05rem, 10.6vw, 3rem);
+    letter-spacing: -.045em;
+  }
+
+  .role {
+    font-size: 1rem;
+  }
+
+  .lede {
+    font-size: .96rem;
+  }
+
+  .cta-row {
+    gap: 6px 16px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .intro__art {
+    width: 100%;
+    aspect-ratio: 1 / .98;
+  }
+
+  .swatches li {
+    width: 30px;
+  }
+
+  .coffee {
+    width: 50px;
+  }
+
+  .about__photo {
+    width: min(84%, 300px);
+  }
+
+  .interests__list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .notepaper {
+    padding: 22px 16px 16px 44px;
+    background-position: -6px 0, 0 0, 0 0;
+  }
+
+  .kits {
+    grid-template-columns: 1fr;
+  }
+
+  .legend ul {
+    grid-auto-flow: row;
+  }
+
+  .project--browser .browser__url {
+    display: none;
+  }
+
+  .project--polaroid,
+  .project--postcard,
+  .project--blueprint {
+    padding: 10px;
+  }
+
+  .postage {
+    right: -6px;
+    width: 50px;
+    height: 58px;
+  }
+
+  .milestone {
+    grid-template-columns: 48px minmax(0, 1fr);
+    column-gap: 12px;
+  }
+
+  .milestone__pin {
+    width: 40px;
+    height: 40px;
+  }
+
+  .milestone__pin svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .stamp {
+    width: 56px;
+    height: 56px;
+    font-size: .52rem;
+    right: -6px;
+    top: -14px;
+  }
+
+  .badge-burst {
+    right: -6px;
+    top: -14px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .letter__paper {
+    padding: 22px 18px 20px 48px;
+    background-position: -18px 0, 0 0, 0 0;
+  }
+
+  .letter__title {
+    font-size: clamp(1.7rem, 8vw, 2.2rem);
+  }
+
+  .socials {
+    padding-left: 0;
+  }
+
+  .socials a {
+    padding: 8px 12px;
+    font-size: .84rem;
+  }
+
+  .postcard__paper {
+    padding: 26px 18px 22px;
+  }
+
+  .postcard__title {
+    padding-right: 76px;
+    font-size: 1.45rem;
+  }
+
+  .postcard__stamp {
+    right: 18px;
+    top: 20px;
+    width: 56px;
+    height: 68px;
+  }
+
+  .postcard__stamp-art svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .field-row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .btn--send {
+    width: auto;
+  }
+
+  .case {
+    width: calc(100vw - 20px);
+    max-height: calc(100dvh - 20px);
+  }
+
+  .case__sheet {
+    grid-template-columns: 1fr;
+    max-height: calc(100dvh - 20px);
+    padding: 16px 16px 22px;
+  }
+
+  .case__media {
+    position: relative;
+    margin-top: 40px;
+  }
+
+  .case__meta {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 360px) {
+  .brand__name {
+    font-size: 1.35rem;
+  }
+
+  .topbar__title {
+    display: none;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .tool {
+    font-size: .8rem;
+  }
+
+  .socials a span {
+    font-size: .8rem;
+  }
+
+  .case__meta {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---- tablet two-column refinements (600–899) ---------------------------- */
+@media (min-width: 600px) and (max-width: 899px) {
+  .about {
+    grid-template-columns: .9fr 1.1fr;
+  }
+
+  .about__story {
+    grid-column: 1 / -1;
+  }
+
+  .about__photo {
+    width: 100%;
+  }
+
+  .about__side {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .interests__list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* ==========================================================================
+   SHORT SCREENS — landscape laptops (≤ 760px tall) & landscape phones
+   ========================================================================== */
+@media (min-width: 900px) and (max-height: 760px) {
+  :root {
+    --top: 58px;
+    --bottom: 76px;
+  }
+
+  .chapter-tag {
+    margin-bottom: 6px;
+  }
+
+  .chapter-tag__num {
+    width: 32px;
+    height: 32px;
+  }
+
+  .lede {
+    margin-bottom: 16px;
+  }
+
+  .about__story>p {
+    font-size: .92rem;
+    margin-bottom: 8px;
+  }
+
+  .mini-road {
+    margin-top: 8px;
+  }
+
+  .notepaper {
+    padding-top: 18px;
+  }
+
+  .kit__paper {
+    padding: 14px 16px;
+  }
+
+  .kit__head {
+    margin-bottom: 10px;
+  }
+
+  .tool {
+    min-height: 34px;
+    padding: 5px 10px;
+  }
+
+  .milestone {
+    grid-template-rows: minmax(120px, 1fr) 78px minmax(120px, 1fr);
+  }
+
+  .project__desc {
+    font-size: .84rem;
+  }
+
+  .letter__paper>p:not(.hand):not(.chapter-tag) {
+    font-size: .9rem;
+    line-height: 1.5;
+  }
+
+  .field textarea {
+    min-height: calc(3 * 28px + 8px);
+  }
+}
+
+@media (max-height: 520px) and (orientation: landscape) {
+  :root {
+    --top: 52px;
+    --bottom: 60px;
+  }
+
+  .intro {
+    grid-template-columns: 1.2fr .8fr;
+  }
+
+  .intro__art {
+    height: 300px;
+    width: auto;
+    margin-top: 0;
+  }
+
+  .hero-title {
+    font-size: clamp(1.9rem, 5vw, 2.8rem);
+  }
+
+  .hint {
+    display: none;
+  }
+
+  .dock__btn {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+/* ---- photo collage, stickers & tooltips on small screens ---------------- */
+@media (max-width: 899px) {
+  .projects__stack { grid-area: auto; gap: 46px; }
+  .project--feature .project__body { grid-template-columns: minmax(0, 1fr); }
+  .project--feature .project__open { grid-column: 1; grid-row: auto; }
+  .intro__art { aspect-ratio: 1 / 1.1; margin-top: 48px; }
+  .intro__art .portrait { left: 0; right: 0; bottom: 2%; }
+  .sticker--corner { right: -6px; top: -26px; --sz: 50px; }
+  .sticker--corner-b { right: 10px; --sz: 46px; }
+  .sticker--corner-c { left: -6px; --sz: 46px; }
+  .sticker--title { right: 0; top: 30px; --sz: 46px; }
+  .sticker--legend { left: auto; right: -18px; top: 8px; --sz: 44px; }
+  .stickers-reset { position: static; transform: rotate(-2deg); margin: 18px auto 0; display: block; }
+  .tool__tip { max-width: min(230px, calc(100vw - 40px)); }
+}

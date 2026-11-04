@@ -1,0 +1,958 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Anush — UI/UX Designer &amp; Creative Frontend Developer · Portfolio</title>
+  <meta name="description" content="The hand-drawn sketchbook portfolio of Anush, a UI/UX designer and creative frontend developer. Flip through selected projects, skills, journey and say hello.">
+  <meta name="author" content="Anush">
+  <meta name="theme-color" content="#F6F1E7">
+  <meta name="color-scheme" content="light">
+  <!-- Live URL (GitHub Pages). Update if you move to a custom domain — see README → SEO -->
+  <link rel="canonical" href="https://anumanuel.github.io/anush-portfolio/">
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Anush · Sketchbook Portfolio">
+  <meta property="og:title" content="Anush — I design things for pixels &amp; people">
+  <meta property="og:description" content="A hand-drawn, horizontally scrolling portfolio: projects, skills, journey and a postcard to say hi.">
+  <meta property="og:url" content="https://anumanuel.github.io/anush-portfolio/">
+  <meta property="og:image" content="https://anumanuel.github.io/anush-portfolio/assets/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Hand-drawn sketchbook portfolio of Anush">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Anush — I design things for pixels &amp; people">
+  <meta name="twitter:description" content="A hand-drawn, horizontally scrolling portfolio of a UI/UX designer &amp; creative developer.">
+  <meta name="twitter:image" content="https://anumanuel.github.io/anush-portfolio/assets/images/og-image.jpg">
+
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/icons/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@1,9..144,400;1,9..144,600&family=Space+Grotesk:wght@500;600;700&display=swap">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <script>document.documentElement.classList.add('js');</script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Anush",
+    "jobTitle": "UI/UX Designer & Creative Frontend Developer",
+    "url": "https://anumanuel.github.io/anush-portfolio/",
+    "knowsAbout": ["UI design", "UX design", "Figma", "HTML", "CSS", "JavaScript", "GSAP", "Responsive web design"]
+  }
+  </script>
+</head>
+<body>
+
+<!-- ============================================================
+     SVG SPRITE — hand-drawn icons & doodles (referenced via <use>)
+     ============================================================ -->
+<svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+  <defs>
+    <pattern id="pat-stripes" width="12" height="12" patternUnits="userSpaceOnUse"><rect width="12" height="12" fill="#FCFAF5"/><rect width="12" height="5.5" fill="#8EAFBF"/></pattern>
+    <pattern id="pat-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="6" stroke="#24231F" stroke-width="1.1" opacity=".5"/></pattern>
+    <pattern id="pat-dots" width="18" height="18" patternUnits="userSpaceOnUse"><circle cx="4.5" cy="4.5" r="2.6" fill="#B04A1A" opacity=".32"/><circle cx="13.5" cy="13.5" r="2.6" fill="#B04A1A" opacity=".32"/></pattern>
+  </defs>
+
+  <!-- UI icons -->
+  <symbol id="i-arrow-r" viewBox="0 0 24 24"><path d="M3.5 12.4c4.6-.5 9.6-.2 15.8-.6"/><path d="M13.6 6.4c2.2 1.9 4.2 3.7 5.9 5.6-1.8 1.8-3.8 3.7-6 5.6"/></symbol>
+  <symbol id="i-arrow-l" viewBox="0 0 24 24"><path d="M20.5 12.4c-4.6-.5-9.6-.2-15.8-.6"/><path d="M10.4 6.4c-2.2 1.9-4.2 3.7-5.9 5.6 1.8 1.8 3.8 3.7 6 5.6"/></symbol>
+  <symbol id="i-arrow-curl" viewBox="0 0 60 60"><path d="M6 8c14-4 30 2 32 16 2 12-12 16-14 8-2-7 10-10 18-4 6 5 8 14 8 24"/><path d="M42 44c2 3 4 6 8 8 2-4 3-8 6-11"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M5.5 5.8c4.4 4 8.6 8.2 13 12.6"/><path d="M18.6 5.4c-4.3 4.6-8.4 8.8-13 13.1"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3.8 7.2c5.6-.5 10.9-.4 16.4 0"/><path d="M3.6 12.2c5.8-.3 11-.2 16.8.2"/><path d="M3.8 17.2c4.4-.4 8.6-.3 12.8.1"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><path d="M3.4 6.6c5.8-.4 11.4-.3 17.2 0 .3 3.8.4 7.4.1 11.1-5.7.4-11.4.3-17.1 0-.4-3.7-.4-7.4-.2-11.1z"/><path d="M3.8 7.2c2.7 2.3 5.4 4.4 8.2 6.3 2.9-2 5.7-4.1 8.3-6.4"/></symbol>
+  <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M3.6 3.8c5.6-.3 11.1-.3 16.7 0 .3 5.5.3 11 0 16.5-5.6.3-11.1.3-16.7 0-.3-5.5-.3-11 0-16.5z"/><path d="M8 10.5v6.2"/><path d="M8 7.4v.1"/><path d="M11.6 16.7v-6.1M11.6 13c0-1.6 1.1-2.6 2.4-2.6 1.4 0 2.2.9 2.2 2.6v3.7"/></symbol>
+  <symbol id="i-github" viewBox="0 0 24 24"><circle cx="6.5" cy="5.5" r="2.2"/><circle cx="6.5" cy="18.5" r="2.2"/><circle cx="17.5" cy="7.5" r="2.2"/><path d="M6.5 7.8v8.4"/><path d="M17.4 9.8c.2 4.2-3.3 5.4-10.6 6.6"/></symbol>
+  <symbol id="i-dribbble" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.6"/><path d="M5.2 7.4c4.6 1.8 9.6 1.4 13.4-1.6"/><path d="M8.6 4.2c3.6 4.4 6.2 10 7.2 15.6"/><path d="M3.6 13.6c4.6-2 10-2.4 16.4-.4"/></symbol>
+  <symbol id="i-instagram" viewBox="0 0 24 24"><path d="M8.4 3.6c2.4-.2 4.8-.2 7.2 0 2.8.2 4.6 2 4.8 4.8.2 2.4.2 4.8 0 7.2-.2 2.8-2 4.6-4.8 4.8-2.4.2-4.8.2-7.2 0-2.8-.2-4.6-2-4.8-4.8-.2-2.4-.2-4.8 0-7.2.2-2.8 2-4.6 4.8-4.8z"/><circle cx="12" cy="12" r="3.9"/><path d="M17.1 6.9v.1"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><path d="M8.4 8.2c3.9-.3 7.8-.3 11.7 0 .3 3.9.3 7.8 0 11.7-3.9.3-7.8.3-11.7 0-.3-3.9-.3-7.8 0-11.7z"/><path d="M15.6 5.4c0-.6-.1-1.2-.2-1.8-3.8-.3-7.6-.3-11.5 0-.3 3.8-.3 7.6 0 11.5.6.1 1.2.2 1.8.2"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M4.4 12.8c1.8 1.6 3.4 3.4 4.8 5.4 3.2-5.2 6.6-9.4 10.6-13"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M3.2 11.2c6-2.6 11.8-5 17.6-7.4-1.8 5.6-3.8 11.2-6.2 16.6-1.4-2.6-2.6-5-3.8-7.4z"/><path d="M10.8 13c3-3 6.2-6 9.8-9"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3.2l2.5 5.6 6 .6-4.6 4 1.4 6-5.3-3.2-5.3 3.2 1.4-6-4.6-4 6-.6z" style="fill:var(--ico-fill,none)"/></symbol>
+  <symbol id="i-external" viewBox="0 0 24 24"><path d="M13.6 4.4c2-.1 4-.1 6 0 .1 2 .1 4 0 6"/><path d="M19.4 4.6c-3.6 3.4-6.6 6.6-9.6 9.8"/><path d="M17.6 13.6c.1 2 .1 4 0 6-4.4.2-8.8.2-13.2 0-.2-4.4-.2-8.8 0-13.2 2-.1 4-.1 6 0"/></symbol>
+
+
+  <!-- Interest icons -->
+  <symbol id="n-camera" viewBox="0 0 24 24"><path d="M3.6 8.2c0-1 .8-1.8 1.8-1.8h2.4l1.6-2.4h5.2l1.6 2.4h2.4c1 0 1.8.8 1.8 1.8v9.6c0 1-.8 1.8-1.8 1.8H5.4c-1 0-1.8-.8-1.8-1.8z"/><circle cx="12" cy="13" r="3.6"/></symbol>
+  <symbol id="n-music" viewBox="0 0 24 24"><path d="M4.4 15.6v-3.4a7.6 7.6 0 0 1 15.2 0v3.4"/><rect x="3.4" y="14.2" width="4" height="6" rx="1.6"/><rect x="16.6" y="14.2" width="4" height="6" rx="1.6"/></symbol>
+  <symbol id="n-plant" viewBox="0 0 24 24"><path d="M7 14.6h10l-1.4 6H8.4z"/><path d="M12 14.4c0-3.4 0-6.4.4-9"/><path d="M12.2 9.4c1.2-2.8 3.8-4 6.6-3.6-.4 3-2.8 4.6-6.6 3.6zM11.8 11.6c-1-2.4-3.4-3.6-6-3 .4 2.6 2.6 4 6 3z"/></symbol>
+  <symbol id="n-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.6"/><path d="M15.6 8.4l-2.2 5-5 2.2 2.2-5z"/></symbol>
+  <symbol id="n-book" viewBox="0 0 24 24"><path d="M12 6.4c-2.4-1.6-5.4-2-8.4-1.4v13.4c3-.6 6-.2 8.4 1.4 2.4-1.6 5.4-2 8.4-1.4V5c-3-.6-6-.2-8.4 1.4zM12 6.4v13.4"/></symbol>
+  <symbol id="n-cup" viewBox="0 0 24 24"><path d="M4.6 9.4h12.2v4.4c0 3.4-2.6 6.2-6.1 6.2s-6.1-2.8-6.1-6.2z"/><path d="M16.8 11h1.4c1.4 0 2.4 1 2.4 2.2s-1 2.4-2.4 2.4h-1.8"/><path d="M8.2 6.6c-.6-1 .6-1.8 0-3M12 6.6c-.6-1 .6-1.8 0-3"/></symbol>
+
+  <!-- Doodles -->
+  <symbol id="d-plane" viewBox="0 0 32 32"><path d="M2.5 15.2L29 4.4 21.4 27.6l-6.2-6.6z" style="fill:var(--plane-fill,#FCFAF5)"/><path d="M15.2 21L29 4.4 10.8 17.2l1.2 8.2 3.2-4.4"/></symbol>
+  <symbol id="d-star" viewBox="0 0 24 24"><path d="M12 2.8c.9 3.6 2.4 5.8 6.6 6.8-3.6 1.4-5.4 3.4-6.2 7.6-1.2-3.8-3-5.8-7-6.8 3.8-1.6 5.6-3.8 6.6-7.6z" style="fill:var(--ico-fill,none)"/></symbol>
+  <symbol id="d-flag" viewBox="0 0 32 40"><path d="M6 38V4"/><path d="M6.4 5c5.6-3 10 3 18.4 0-1.8 4.2-1.6 7.6 0 11.4-8 3-12.6-3-18.4 0" style="fill:var(--flag-fill,#F3D77B)"/></symbol>
+  <symbol id="d-tree" viewBox="0 0 40 48"><path d="M20 46V30"/><path d="M20 30c-9 1-15-5-12-12 1-3 4-5 6-5 1-6 6-9 11-7 4 2 6 6 5 9 5 1 7 6 5 10-2 5-8 6-15 5z" style="fill:var(--tree-fill,#A8B49A)"/><path d="M20 36l-5-4M20 33l5-4"/></symbol>
+  <symbol id="d-mountain" viewBox="0 0 64 40"><path d="M2 38l18-26 8 10 10-18 24 34z" style="fill:var(--mtn-fill,#EEE6D6)"/><path d="M34 10l4-6 4 6-4 2z" style="fill:#FCFAF5"/></symbol>
+  <symbol id="d-house" viewBox="0 0 40 40"><path d="M6 18L20 6l14 12"/><path d="M9 16v20h22V16" style="fill:var(--house-fill,#FCFAF5)"/><path d="M17 36v-9h6v9"/><path d="M26 10V5h4v8"/></symbol>
+  <symbol id="d-bird" viewBox="0 0 32 16"><path d="M2 10c4-6 8-6 12 0 4-6 9-7 16-3"/></symbol>
+  <symbol id="d-cloud" viewBox="0 0 64 32"><path d="M10 28c-6 0-8-8-2-10 0-6 8-9 12-5 2-7 14-9 17-1 6-3 12 1 11 7 6 0 8 9 0 9z" style="fill:var(--cloud-fill,#FCFAF5)"/></symbol>
+  <symbol id="d-mailbox" viewBox="0 0 48 56"><path d="M22 54V30"/><path d="M8 30V18c0-6 4-10 10-10h16c5 0 8 4 8 10v12z" style="fill:var(--mail-fill,#8EAFBF)"/><path d="M18 8c-5 0-9 4-9 10v12"/><path d="M30 12v-8h8v5h-8" style="fill:#EE7F45"/></symbol>
+  <symbol id="d-tent" viewBox="0 0 48 40"><path d="M4 36L24 6l20 30z" style="fill:var(--tent-fill,#F3D77B)"/><path d="M24 6v30M18 36l6-10 6 10"/></symbol>
+  <symbol id="d-sun" viewBox="0 0 40 40"><circle cx="20" cy="20" r="7" style="fill:var(--sun-fill,#F3D77B)"/><path d="M20 4v5M20 31v5M4 20h5M31 20h5M8.6 8.6l3.6 3.6M27.8 27.8l3.6 3.6M8.6 31.4l3.6-3.6M27.8 12.2l3.6-3.6"/></symbol>
+  <symbol id="d-heart" viewBox="0 0 24 24"><path d="M12 20c-4-3-8-6-8-10 0-3 2-5 4.4-5C10 5 11.2 6 12 7.4 12.8 6 14 5 15.6 5 18 5 20 7 20 10c0 4-4 7-8 10z" style="fill:var(--ico-fill,none)"/></symbol>
+  <symbol id="d-swirl" viewBox="0 0 40 40"><path d="M20 20c2-1 2-4 0-5-3-1-6 1-6 5 0 5 5 8 10 7 6-1 9-7 7-13-2-7-10-10-17-7"/></symbol>
+  <symbol id="d-pin" viewBox="0 0 24 32"><path d="M12 30c-4-7-9-12-9-18a9 9 0 0 1 18 0c0 6-5 11-9 18z" style="fill:var(--pin-fill,#EE7F45)"/><circle cx="12" cy="12" r="3.4" style="fill:#FCFAF5"/></symbol>
+  <symbol id="d-pushpin" viewBox="0 0 32 32"><circle cx="16" cy="11" r="8" style="fill:var(--pin-fill,#EE7F45)"/><path d="M12 8.4c1-1.6 2.6-2.2 4-2.2"/><path d="M16 19v11"/></symbol>
+  <symbol id="d-clip" viewBox="0 0 24 56"><path d="M8 40V12c0-4 2-7 5-7s5 3 5 7v32c0 5-3 9-7 9s-7-4-7-9V16"/></symbol>
+  <symbol id="d-mortar" viewBox="0 0 40 32"><path d="M2 12L20 4l18 8-18 8z" style="fill:var(--ico-fill,#FCFAF5)"/><path d="M10 16v7c4 4 16 4 20 0v-7M36 13v10"/></symbol>
+  <symbol id="d-bulb" viewBox="0 0 32 40"><path d="M11 28c0-5-6-7-6-14a11 11 0 0 1 22 0c0 7-6 9-6 14z" style="fill:var(--ico-fill,#FCFAF5)"/><path d="M11 32h10M12.5 36h7M16 28v-8l-3-3M16 20l3-3"/></symbol>
+  <symbol id="d-brief" viewBox="0 0 40 34"><path d="M3 10h34v21H3z" style="fill:var(--ico-fill,#FCFAF5)"/><path d="M14 10V5h12v5M3 18c10 4 24 4 34 0M18 19v3h4v-3"/></symbol>
+  <symbol id="d-ribbon" viewBox="0 0 36 46"><circle cx="18" cy="16" r="12" style="fill:var(--ico-fill,#F3D77B)"/><circle cx="18" cy="16" r="7"/><path d="M10 25l-4 18 7-4 4 6 3-17M26 25l4 18-7-4-4 6"/></symbol>
+  <symbol id="d-rocket" viewBox="0 0 36 44"><path d="M18 3c7 6 9 15 6 27H12C9 18 11 9 18 3z" style="fill:var(--ico-fill,#FCFAF5)"/><circle cx="18" cy="15" r="3.4"/><path d="M12 24l-6 6 1 6 6-6M24 24l6 6-1 6-6-6M15 34c0 3 1 5 3 7 2-2 3-4 3-7"/></symbol>
+  <symbol id="d-snail" viewBox="0 0 56 36"><path d="M4 32c8 1 30 1 46 0 3-1 4-5 1-6-3 0-4 2-6 2" /><path d="M14 31c-6-3-7-12-2-17 6-6 17-5 21 2 4 6 0 14-7 14-5 0-8-4-7-8 1-4 6-5 8-2" style="fill:var(--ico-fill,#F3D77B)"/><path d="M46 26c0-4-1-8 1-12M50 26c1-4 2-7 5-10"/><circle cx="47" cy="13" r="1.4"/><circle cx="55" cy="15" r="1.4"/></symbol>
+  <!-- Software stickers (hand-drawn, die-cut look) -->
+  <symbol id="s-figma" viewBox="0 0 32 32"><rect x=".6" y=".6" width="30.8" height="30.8" rx="9" fill="#fff"/><path d="M6.2 3.4c6.6-.5 13.2-.4 19.8.1 1.6.1 2.5 1 2.6 2.6.4 6.6.4 13.2-.1 19.8-.1 1.6-1 2.5-2.6 2.6-6.6.4-13.2.4-19.8-.1-1.6-.1-2.5-1-2.6-2.6-.4-6.6-.3-13.2.1-19.8.1-1.5 1-2.4 2.6-2.6z" fill="#2B2A28" stroke="#24231F" stroke-width="1.2"/><path d="M16 8.2h-2.6a2.6 2.6 0 0 0 0 5.2H16z" fill="#F24E1E"/><path d="M16 8.2h2.6a2.6 2.6 0 0 1 0 5.2H16z" fill="#FF7262"/><path d="M16 13.4h-2.6a2.6 2.6 0 0 0 0 5.2H16z" fill="#A259FF"/><circle cx="18.6" cy="16" r="2.6" fill="#1ABCFE"/><path d="M16 18.6v2.6a2.6 2.6 0 1 1-2.6-2.6z" fill="#0ACF83"/></symbol>
+  <symbol id="s-ps" viewBox="0 0 32 32"><rect x=".6" y=".6" width="30.8" height="30.8" rx="9" fill="#fff"/><path d="M6.2 3.4c6.6-.5 13.2-.4 19.8.1 1.6.1 2.5 1 2.6 2.6.4 6.6.4 13.2-.1 19.8-.1 1.6-1 2.5-2.6 2.6-6.6.4-13.2.4-19.8-.1-1.6-.1-2.5-1-2.6-2.6-.4-6.6-.3-13.2.1-19.8.1-1.5 1-2.4 2.6-2.6z" fill="#001E36" stroke="#24231F" stroke-width="1.2"/><text x="16" y="20.6" text-anchor="middle" font-family="Space Grotesk, Segoe UI, sans-serif" font-weight="700" font-size="12.5" fill="#31A8FF">Ps</text></symbol>
+  <symbol id="s-ai" viewBox="0 0 32 32"><rect x=".6" y=".6" width="30.8" height="30.8" rx="9" fill="#fff"/><path d="M6.2 3.4c6.6-.5 13.2-.4 19.8.1 1.6.1 2.5 1 2.6 2.6.4 6.6.4 13.2-.1 19.8-.1 1.6-1 2.5-2.6 2.6-6.6.4-13.2.4-19.8-.1-1.6-.1-2.5-1-2.6-2.6-.4-6.6-.3-13.2.1-19.8.1-1.5 1-2.4 2.6-2.6z" fill="#330000" stroke="#24231F" stroke-width="1.2"/><text x="16" y="20.6" text-anchor="middle" font-family="Space Grotesk, Segoe UI, sans-serif" font-weight="700" font-size="12.5" fill="#FF9A00">Ai</text></symbol>
+  <symbol id="s-uiux" viewBox="0 0 32 32"><rect x=".6" y=".6" width="30.8" height="30.8" rx="9" fill="#fff"/><path d="M6.2 3.4c6.6-.5 13.2-.4 19.8.1 1.6.1 2.5 1 2.6 2.6.4 6.6.4 13.2-.1 19.8-.1 1.6-1 2.5-2.6 2.6-6.6.4-13.2.4-19.8-.1-1.6-.1-2.5-1-2.6-2.6-.4-6.6-.3-13.2.1-19.8.1-1.5 1-2.4 2.6-2.6z" fill="#F7B6C8" stroke="#24231F" stroke-width="1.2"/><circle cx="13.6" cy="14" r="5.6" fill="#FCFAF5" stroke="#24231F" stroke-width="1.3"/><path d="M11.6 12.6v.6M15.6 12.6v.6" stroke="#24231F" stroke-width="1.5" stroke-linecap="round"/><path d="M11 15.4c1.4 1.6 3.8 1.6 5.2 0" fill="none" stroke="#24231F" stroke-width="1.3" stroke-linecap="round"/><path d="M18.4 17.4l6.4 2.6-2.8 1-1.2 2.8z" fill="#24231F" stroke="#24231F" stroke-width="1" stroke-linejoin="round"/></symbol>
+  <symbol id="s-wire" viewBox="0 0 32 32"><rect x=".6" y=".6" width="30.8" height="30.8" rx="9" fill="#fff"/><path d="M6.2 3.4c6.6-.5 13.2-.4 19.8.1 1.6.1 2.5 1 2.6 2.6.4 6.6.4 13.2-.1 19.8-.1 1.6-1 2.5-2.6 2.6-6.6.4-13.2.4-19.8-.1-1.6-.1-2.5-1-2.6-2.6-.4-6.6-.3-13.2.1-19.8.1-1.5 1-2.4 2.6-2.6z" fill="#DCE8EE" stroke="#24231F" stroke-width="1.2"/><path d="M8.2 8.4c5.2-.2 10.4-.2 15.6 0 .2 5.1.2 10.2 0 15.2-5.2.2-10.4.2-15.6 0-.2-5-.2-10.1 0-15.2z" fill="#fff" stroke="#4F7486" stroke-width="1.3"/><path d="M8.4 12.2h15.2M11 15.6h5.4M11 18.6h9.6M11 21.2h4" fill="none" stroke="#4F7486" stroke-width="1.3" stroke-linecap="round"/><path d="M19.4 14.8l2.4 2.2M21.8 14.8l-2.4 2.2" stroke="#EE7F45" stroke-width="1.2" stroke-linecap="round"/></symbol>
+  <symbol id="s-proto" viewBox="0 0 32 32"><rect x=".6" y=".6" width="30.8" height="30.8" rx="9" fill="#fff"/><path d="M6.2 3.4c6.6-.5 13.2-.4 19.8.1 1.6.1 2.5 1 2.6 2.6.4 6.6.4 13.2-.1 19.8-.1 1.6-1 2.5-2.6 2.6-6.6.4-13.2.4-19.8-.1-1.6-.1-2.5-1-2.6-2.6-.4-6.6-.3-13.2.1-19.8.1-1.5 1-2.4 2.6-2.6z" fill="#C9B8FF" stroke="#24231F" stroke-width="1.2"/><rect x="6.8" y="8.6" width="7.4" height="12.6" rx="1.6" fill="#fff" stroke="#24231F" stroke-width="1.2"/><rect x="17.8" y="10.8" width="7.4" height="12.6" rx="1.6" fill="#fff" stroke="#24231F" stroke-width="1.2"/><path d="M11.6 12.6c2.8-2.4 6-2.2 8.6.6M18.6 11.6l1.6 1.8-2.2.6" fill="none" stroke="#24231F" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="s-ds" viewBox="0 0 32 32"><rect x=".6" y=".6" width="30.8" height="30.8" rx="9" fill="#fff"/><path d="M6.2 3.4c6.6-.5 13.2-.4 19.8.1 1.6.1 2.5 1 2.6 2.6.4 6.6.4 13.2-.1 19.8-.1 1.6-1 2.5-2.6 2.6-6.6.4-13.2.4-19.8-.1-1.6-.1-2.5-1-2.6-2.6-.4-6.6-.3-13.2.1-19.8.1-1.5 1-2.4 2.6-2.6z" fill="#F3D77B" stroke="#24231F" stroke-width="1.2"/><rect x="7.4" y="7.6" width="9" height="7" rx="1.6" fill="#EE7F45" stroke="#24231F" stroke-width="1.2"/><circle cx="21.4" cy="11.1" r="3.6" fill="#8EAFBF" stroke="#24231F" stroke-width="1.2"/><rect x="7.4" y="18" width="17.4" height="6" rx="3" fill="#fff" stroke="#24231F" stroke-width="1.2"/><path d="M10.4 21h7" stroke="#24231F" stroke-width="1.2" stroke-linecap="round"/></symbol>
+  <symbol id="s-html" viewBox="0 0 32 32"><rect x=".6" y=".6" width="30.8" height="30.8" rx="9" fill="#fff"/><path d="M6.2 3.4c6.6-.5 13.2-.4 19.8.1 1.6.1 2.5 1 2.6 2.6.4 6.6.4 13.2-.1 19.8-.1 1.6-1 2.5-2.6 2.6-6.6.4-13.2.4-19.8-.1-1.6-.1-2.5-1-2.6-2.6-.4-6.6-.3-13.2.1-19.8.1-1.5 1-2.4 2.6-2.6z" fill="#E44D26" stroke="#24231F" stroke-width="1.2"/><path d="M12.2 11.4L8 16l4.2 4.6M19.8 11.4L24 16l-4.2 4.6M17.4 9.8l-2.8 12.4" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="s-css" viewBox="0 0 32 32"><rect x=".6" y=".6" width="30.8" height="30.8" rx="9" fill="#fff"/><path d="M6.2 3.4c6.6-.5 13.2-.4 19.8.1 1.6.1 2.5 1 2.6 2.6.4 6.6.4 13.2-.1 19.8-.1 1.6-1 2.5-2.6 2.6-6.6.4-13.2.4-19.8-.1-1.6-.1-2.5-1-2.6-2.6-.4-6.6-.3-13.2.1-19.8.1-1.5 1-2.4 2.6-2.6z" fill="#2965F1" stroke="#24231F" stroke-width="1.2"/><path d="M13 9.4c-2 0-2.2 1.4-2.2 2.9s-.3 3.1-2 3.7c1.7.6 2 2.2 2 3.7s.2 2.9 2.2 2.9M19 9.4c2 0 2.2 1.4 2.2 2.9s.3 3.1 2 3.7c-1.7.6-2 2.2-2 3.7s-.2 2.9-2.2 2.9" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="s-scss" viewBox="0 0 32 32"><rect x=".6" y=".6" width="30.8" height="30.8" rx="9" fill="#fff"/><path d="M6.2 3.4c6.6-.5 13.2-.4 19.8.1 1.6.1 2.5 1 2.6 2.6.4 6.6.4 13.2-.1 19.8-.1 1.6-1 2.5-2.6 2.6-6.6.4-13.2.4-19.8-.1-1.6-.1-2.5-1-2.6-2.6-.4-6.6-.3-13.2.1-19.8.1-1.5 1-2.4 2.6-2.6z" fill="#CD6799" stroke="#24231F" stroke-width="1.2"/><path d="M20.4 10.4c-1.9-1.4-6.6-1.3-7 1.3-.5 3 7 2.8 6.6 6.2-.3 2.8-4.9 3.8-7.6 1.7" fill="none" stroke="#fff" stroke-width="2.3" stroke-linecap="round"/></symbol>
+  <symbol id="s-js" viewBox="0 0 32 32"><rect x=".6" y=".6" width="30.8" height="30.8" rx="9" fill="#fff"/><path d="M6.2 3.4c6.6-.5 13.2-.4 19.8.1 1.6.1 2.5 1 2.6 2.6.4 6.6.4 13.2-.1 19.8-.1 1.6-1 2.5-2.6 2.6-6.6.4-13.2.4-19.8-.1-1.6-.1-2.5-1-2.6-2.6-.4-6.6-.3-13.2.1-19.8.1-1.5 1-2.4 2.6-2.6z" fill="#F7DF1E" stroke="#24231F" stroke-width="1.2"/><text x="25" y="25.4" text-anchor="end" font-family="Space Grotesk, Segoe UI, sans-serif" font-weight="700" font-size="11.5" fill="#24231F">JS</text></symbol>
+  <symbol id="s-jquery" viewBox="0 0 32 32"><rect x=".6" y=".6" width="30.8" height="30.8" rx="9" fill="#fff"/><path d="M6.2 3.4c6.6-.5 13.2-.4 19.8.1 1.6.1 2.5 1 2.6 2.6.4 6.6.4 13.2-.1 19.8-.1 1.6-1 2.5-2.6 2.6-6.6.4-13.2.4-19.8-.1-1.6-.1-2.5-1-2.6-2.6-.4-6.6-.3-13.2.1-19.8.1-1.5 1-2.4 2.6-2.6z" fill="#0769AD" stroke="#24231F" stroke-width="1.2"/><path d="M8.4 12.6c1 4.6 5.6 7.6 10.6 6.2M10.4 10.4c.8 3.4 4 5.4 7.6 4.6M13 8.4c.4 2 2.2 3.2 4.4 2.8" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round"/><text x="24.6" y="25.4" text-anchor="end" font-family="Space Grotesk, Segoe UI, sans-serif" font-weight="700" font-size="7.5" fill="#fff">jQ</text></symbol>
+  <symbol id="s-bootstrap" viewBox="0 0 32 32"><rect x=".6" y=".6" width="30.8" height="30.8" rx="9" fill="#fff"/><path d="M6.2 3.4c6.6-.5 13.2-.4 19.8.1 1.6.1 2.5 1 2.6 2.6.4 6.6.4 13.2-.1 19.8-.1 1.6-1 2.5-2.6 2.6-6.6.4-13.2.4-19.8-.1-1.6-.1-2.5-1-2.6-2.6-.4-6.6-.3-13.2.1-19.8.1-1.5 1-2.4 2.6-2.6z" fill="#7952B3" stroke="#24231F" stroke-width="1.2"/><text x="16" y="21.6" text-anchor="middle" font-family="Space Grotesk, Segoe UI, sans-serif" font-weight="700" font-size="15" fill="#fff">B</text></symbol>
+  <symbol id="s-tailwind" viewBox="0 0 32 32"><rect x=".6" y=".6" width="30.8" height="30.8" rx="9" fill="#fff"/><path d="M6.2 3.4c6.6-.5 13.2-.4 19.8.1 1.6.1 2.5 1 2.6 2.6.4 6.6.4 13.2-.1 19.8-.1 1.6-1 2.5-2.6 2.6-6.6.4-13.2.4-19.8-.1-1.6-.1-2.5-1-2.6-2.6-.4-6.6-.3-13.2.1-19.8.1-1.5 1-2.4 2.6-2.6z" fill="#F0FAFF" stroke="#24231F" stroke-width="1.2"/><path d="M7.4 14c1.6-3 3.8-4 6.4-3.2 2.4.8 2.8 2.8 5.4 3.2 2.2.4 3.8-.6 5.4-2.8M7.4 20.4c1.6-3 3.8-4 6.4-3.2 2.4.8 2.8 2.8 5.4 3.2 2.2.4 3.8-.6 5.4-2.8" fill="none" stroke="#38BDF8" stroke-width="2.4" stroke-linecap="round"/></symbol>
+  <symbol id="s-gsap" viewBox="0 0 32 32"><rect x=".6" y=".6" width="30.8" height="30.8" rx="9" fill="#fff"/><path d="M6.2 3.4c6.6-.5 13.2-.4 19.8.1 1.6.1 2.5 1 2.6 2.6.4 6.6.4 13.2-.1 19.8-.1 1.6-1 2.5-2.6 2.6-6.6.4-13.2.4-19.8-.1-1.6-.1-2.5-1-2.6-2.6-.4-6.6-.3-13.2.1-19.8.1-1.5 1-2.4 2.6-2.6z" fill="#0E100F" stroke="#24231F" stroke-width="1.2"/><text x="16" y="18.4" text-anchor="middle" font-family="Space Grotesk, Segoe UI, sans-serif" font-weight="700" font-size="8.4" fill="#88CE02">GSAP</text><path d="M8.6 22c3-1.6 6.4-1.6 9.6 0 2 1 3.6 1 5.2 0" fill="none" stroke="#88CE02" stroke-width="1.4" stroke-linecap="round"/></symbol>
+  <symbol id="s-three" viewBox="0 0 32 32"><rect x=".6" y=".6" width="30.8" height="30.8" rx="9" fill="#fff"/><path d="M6.2 3.4c6.6-.5 13.2-.4 19.8.1 1.6.1 2.5 1 2.6 2.6.4 6.6.4 13.2-.1 19.8-.1 1.6-1 2.5-2.6 2.6-6.6.4-13.2.4-19.8-.1-1.6-.1-2.5-1-2.6-2.6-.4-6.6-.3-13.2.1-19.8.1-1.5 1-2.4 2.6-2.6z" fill="#FCFAF5" stroke="#24231F" stroke-width="1.2"/><path d="M8.6 23.6L12.4 7.8 24 19.6z M10.5 15.7l7.7-2 -2 7.9z" fill="none" stroke="#24231F" stroke-width="1.3" stroke-linejoin="round"/></symbol>
+  <symbol id="s-scroll" viewBox="0 0 32 32"><rect x=".6" y=".6" width="30.8" height="30.8" rx="9" fill="#fff"/><path d="M6.2 3.4c6.6-.5 13.2-.4 19.8.1 1.6.1 2.5 1 2.6 2.6.4 6.6.4 13.2-.1 19.8-.1 1.6-1 2.5-2.6 2.6-6.6.4-13.2.4-19.8-.1-1.6-.1-2.5-1-2.6-2.6-.4-6.6-.3-13.2.1-19.8.1-1.5 1-2.4 2.6-2.6z" fill="#B7E59A" stroke="#24231F" stroke-width="1.2"/><rect x="12" y="6.8" width="8" height="13" rx="4" fill="#fff" stroke="#24231F" stroke-width="1.3"/><path d="M16 9.6v2.6M12.4 22.6l3.6 2.4 3.6-2.4" fill="none" stroke="#24231F" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="s-anim" viewBox="0 0 32 32"><rect x=".6" y=".6" width="30.8" height="30.8" rx="9" fill="#fff"/><path d="M6.2 3.4c6.6-.5 13.2-.4 19.8.1 1.6.1 2.5 1 2.6 2.6.4 6.6.4 13.2-.1 19.8-.1 1.6-1 2.5-2.6 2.6-6.6.4-13.2.4-19.8-.1-1.6-.1-2.5-1-2.6-2.6-.4-6.6-.3-13.2.1-19.8.1-1.5 1-2.4 2.6-2.6z" fill="#EE7F45" stroke="#24231F" stroke-width="1.2"/><path d="M14 7.6c.7 3.8 2.3 5.7 6.2 7.4-3.9 1.6-5.5 3.4-6.2 7.4-.7-4-2.3-5.8-6.2-7.4 3.9-1.7 5.5-3.6 6.2-7.4z" fill="#fff" stroke="#24231F" stroke-width="1.2" stroke-linejoin="round"/><path d="M22.6 18.8c.3 1.6 1 2.4 2.6 3.1-1.6.7-2.3 1.4-2.6 3.1-.3-1.7-1-2.4-2.6-3.1 1.6-.7 2.3-1.5 2.6-3.1z" fill="#F3D77B" stroke="#24231F" stroke-width="1"/></symbol>
+  <symbol id="s-responsive" viewBox="0 0 32 32"><rect x=".6" y=".6" width="30.8" height="30.8" rx="9" fill="#fff"/><path d="M6.2 3.4c6.6-.5 13.2-.4 19.8.1 1.6.1 2.5 1 2.6 2.6.4 6.6.4 13.2-.1 19.8-.1 1.6-1 2.5-2.6 2.6-6.6.4-13.2.4-19.8-.1-1.6-.1-2.5-1-2.6-2.6-.4-6.6-.3-13.2.1-19.8.1-1.5 1-2.4 2.6-2.6z" fill="#8EAFBF" stroke="#24231F" stroke-width="1.2"/><rect x="6.4" y="8.6" width="13.4" height="9.4" rx="1.2" fill="#fff" stroke="#24231F" stroke-width="1.2"/><path d="M11 21.6h4.4M13.1 18v3.6" stroke="#24231F" stroke-width="1.2" stroke-linecap="round"/><rect x="20.4" y="12" width="5.4" height="10.4" rx="1.2" fill="#F3D77B" stroke="#24231F" stroke-width="1.2"/></symbol>
+</svg>
+
+<a class="skip-link" href="#intro">Skip to content</a>
+
+<!-- Sketchbook cover — opens on load (pure CSS animation; removed by JS) -->
+<div class="cover" aria-hidden="true">
+  <div class="cover__board">
+    <div class="cover__label">
+      <span class="cover__no">Sketchbook No. 06</span>
+      <span class="cover__name">Anush</span>
+      <span class="cover__sub">ideas · interfaces · interactions</span>
+    </div>
+    <span class="cover__band"></span>
+  </div>
+</div>
+
+<!-- ============================================================
+     TOP BAR — brand + chapter index
+     ============================================================ -->
+<header class="topbar">
+  <a class="brand" href="#intro" data-goto="intro" aria-label="Anush — go to the first page">
+    <span class="brand__name">Anush</span>
+    <span class="brand__tag">Sketchbook No. 06 · Portfolio</span>
+  </a>
+
+  <p class="topbar__status" aria-hidden="true"><span class="topbar__num">01</span><span class="topbar__title">Hello</span></p>
+
+  <button class="toc-toggle" type="button" aria-expanded="false" aria-controls="chapters">
+    <svg class="ico" aria-hidden="true"><use href="#i-menu"/></svg>
+    <span>Contents</span>
+  </button>
+
+  <nav class="chapters" id="chapters" aria-label="Chapters">
+    <p class="chapters__heading">Contents</p>
+    <ol class="chapters__list">
+      <li><a href="#intro" data-goto="intro"><span class="chapters__num">01</span><span class="chapters__label">Hello</span><span class="chapters__long">The introduction</span></a></li>
+      <li><a href="#about" data-goto="about"><span class="chapters__num">02</span><span class="chapters__label">About</span><span class="chapters__long">A little about me</span></a></li>
+      <li><a href="#toolbox" data-goto="toolbox"><span class="chapters__num">03</span><span class="chapters__label">Toolbox</span><span class="chapters__long">My creative toolbox</span></a></li>
+      <li><a href="#projects" data-goto="projects"><span class="chapters__num">04</span><span class="chapters__label">Work</span><span class="chapters__long">Selected projects</span></a></li>
+      <li><a href="#journey" data-goto="journey"><span class="chapters__num">05</span><span class="chapters__label">Journey</span><span class="chapters__long">Journey &amp; achievements</span></a></li>
+      <li><a href="#contact" data-goto="contact"><span class="chapters__num">06</span><span class="chapters__label">Say hi</span><span class="chapters__long">Let's connect</span></a></li>
+    </ol>
+    <svg class="chapters__marker" aria-hidden="true" focusable="false"><path pathLength="1"/></svg>
+    <p class="chapters__foot hand">tip: swipe or use ← → to flip pages</p>
+  </nav>
+</header>
+
+<!-- ============================================================
+     THE STORYBOARD — horizontally scrolling sketchbook pages
+     ============================================================ -->
+<main class="storyboard" id="storyboard" aria-label="Portfolio sketchbook">
+  <div class="track" id="track">
+
+    <!-- ========== 01 · THE INTRODUCTION ========== -->
+    <section class="scene scene--intro" id="intro" data-chapter="01" data-title="Hello" aria-labelledby="intro-title" tabindex="-1">
+      <div class="scene__inner intro">
+        <div class="intro__copy">
+          <p class="intro__hey hand reveal" style="--d:.1s">psst — welcome to my sketchbook <svg class="ico ico--curl" aria-hidden="true"><use href="#i-arrow-curl"/></svg></p>
+          <p class="eyebrow reveal" style="--d:.2s">Portfolio · Vol. 06 · 2026</p>
+          <h1 class="hero-title" id="intro-title">
+            <span class="line"><span class="line__in">Hey, I'm Anush —</span></span>
+            <span class="line"><span class="line__in">I design things</span></span>
+            <span class="line"><span class="line__in">for <em class="accent circled" data-sketch="circle" data-sketch-pad="12" data-sketch-seed="pixels">pixels</em> <span class="amp">&amp;</span> <span class="marker">people.</span></span></span>
+          </h1>
+          <p class="role reveal" style="--d:.75s"><span data-sketch="underline" data-sketch-seed="role">UI/UX Designer</span> <span class="role__amp">&amp;</span> Creative Frontend Developer</p>
+          <p class="lede reveal" style="--d:.85s">Somewhere between imagination and interaction. I sketch ideas on paper, shape them in Figma and bring them to life with clean, accessible code — interfaces that feel considered, a little playful and very human.</p>
+          <div class="cta-row reveal" style="--d:.95s">
+            <a class="btn btn--ink" href="#about" data-goto="about">
+              <span>Flip through my sketchbook</span>
+              <svg class="ico" aria-hidden="true"><use href="#i-arrow-r"/></svg>
+            </a>
+            <a class="link-hand" href="#projects" data-goto="projects">or jump straight to the work <svg class="ico" aria-hidden="true"><use href="#i-arrow-r"/></svg></a>
+          </div>
+        </div>
+
+        <div class="intro__art" data-parallax>
+          <figure class="portrait pop" style="--d:.45s" data-depth="0.2">
+            <div class="portrait__cut">
+              <svg class="portrait__blob" viewBox="0 0 1000 971" aria-hidden="true" focusable="false">
+                <path class="portrait__blob-fill" d="M480 64C652 52 822 152 862 330 900 502 818 690 648 770 478 850 258 818 160 680 62 540 92 330 202 200 272 116 370 70 480 64Z"/>
+                <path class="portrait__blob-dots" d="M480 64C652 52 822 152 862 330 900 502 818 690 648 770 478 850 258 818 160 680 62 540 92 330 202 200 272 116 370 70 480 64Z"/>
+                <path class="portrait__blob-line" d="M496 46C668 40 846 146 878 328 912 512 826 704 650 786 470 868 246 828 146 686 52 544 84 322 196 188 268 102 384 50 496 46Z"/>
+              </svg>
+              <img class="portrait__photo" src="assets/images/anush-portrait-900.webp"
+                   srcset="assets/images/anush-portrait-560.webp 560w, assets/images/anush-portrait-900.webp 900w"
+                   sizes="(min-width: 900px) 36vw, 88vw" width="900" height="874" fetchpriority="high" decoding="async"
+                   alt="Portrait photo of Anush smiling softly in a light zip jacket over a white T-shirt, decorated with hand-drawn doodles: a yellow crown, sparkles and a pencil tucked behind one ear">
+              <svg class="portrait__marker draw" viewBox="0 0 1000 971" aria-hidden="true" focusable="false">
+                <defs>
+                  <mask id="portrait-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="1000" height="971" style="mask-type:alpha">
+                    <image href="assets/images/anush-portrait-560.webp" x="0" y="0" width="1000" height="971" preserveAspectRatio="none"/>
+                  </mask>
+                </defs>
+                <g mask="url(#portrait-mask)">
+                  <path class="draw__path" pathLength="1" stroke-dasharray="1" d="M150 560L345 545 140 625 355 600 135 690 360 660 130 760 365 725 135 830 360 800 150 890 350 875"/>
+                  <path class="draw__path" pathLength="1" stroke-dasharray="1" d="M600 470L700 440 575 540 800 500 570 610 880 560 575 680 905 640 580 750 915 715 590 820 920 790 600 885 910 870"/>
+                </g>
+              </svg>
+              <svg class="portrait__doodles" viewBox="0 0 1000 971" aria-hidden="true" focusable="false">
+                <g class="pd pd--crown" style="--pd:1.25s">
+                  <g transform="rotate(-9 470 60)">
+                    <path d="M352 112L340-2 408 52 462-40 516 46 588-6 588 108C512 92 430 94 352 112Z" fill="#F3D77B" stroke="#24231F" stroke-width="8" stroke-linejoin="round"/>
+                    <path d="M372 92C432 82 512 80 568 90" fill="none" stroke="#24231F" stroke-width="6" stroke-linecap="round"/>
+                    <circle cx="340" cy="-10" r="13" fill="#EE7F45" stroke="#24231F" stroke-width="6"/>
+                    <circle cx="462" cy="-50" r="14" fill="#8EAFBF" stroke="#24231F" stroke-width="6"/>
+                    <circle cx="588" cy="-16" r="13" fill="#EE7F45" stroke="#24231F" stroke-width="6"/>
+                    <circle cx="430" cy="76" r="7" fill="#24231F"/>
+                    <circle cx="510" cy="74" r="7" fill="#24231F"/>
+                  </g>
+                </g>
+                <g class="pd pd--pencil" style="--pd:1.4s">
+                  <g transform="rotate(-48 700 190)" stroke="#24231F" stroke-width="6" stroke-linejoin="round">
+                    <rect x="600" y="176" width="190" height="28" rx="4" fill="#EE7F45"/>
+                    <path d="M790 176l40 14-40 14z" fill="#FCE9D8"/>
+                    <path d="M818 186l12 4-12 4z" fill="#24231F"/>
+                    <rect x="570" y="176" width="32" height="28" fill="#E7B7A6"/>
+                    <path d="M622 176v28" fill="none" stroke-width="4"/>
+                  </g>
+                </g>
+                <g class="pd pd--spark" style="--pd:1.55s">
+                  <path d="M200 116Q200 170 254 170 200 170 200 224 200 170 146 170 200 170 200 116Z" fill="#F3D77B" stroke="#24231F" stroke-width="6" stroke-linejoin="round"/>
+                </g>
+                <g class="pd pd--spark" style="--pd:1.65s">
+                  <path d="M848 156Q848 196 888 196 848 196 848 236 848 196 808 196 848 196 848 156Z" fill="#EE7F45" stroke="#24231F" stroke-width="6" stroke-linejoin="round"/>
+                </g>
+                <g class="pd pd--spark" style="--pd:1.75s">
+                  <path d="M156 380Q156 404 180 404 156 404 156 428 156 404 132 404 156 404 156 380Z" fill="none" stroke="#24231F" stroke-width="6" stroke-linejoin="round"/>
+                </g>
+                <g class="pd pd--lines" style="--pd:1.8s" fill="none" stroke="#24231F" stroke-width="8" stroke-linecap="round">
+                  <path d="M252 214L206 192M240 262H190M252 310L208 334"/>
+                </g>
+                <g class="pd pd--heart" style="--pd:1.95s">
+                  <path d="M250 742C214 718 192 698 192 672 192 652 208 640 224 640 236 640 246 648 250 658 254 648 264 640 276 640 292 640 308 652 308 672 308 698 286 718 250 742Z" fill="#EE7F45" stroke="#24231F" stroke-width="6" stroke-linejoin="round"/>
+                </g>
+              </svg>
+            </div>
+            <figcaption class="portrait__caption hand">me, mid-idea (probably)</figcaption>
+          </figure>
+
+          <button class="portrait__note hand pop" style="--d:1.1s" type="button" data-cycle-note
+                  data-notes='["← yep, that&#39;s me!","← still me. promise.","← I drew this in 1 take (ok, 7)","← you really like clicking, huh?","← fine — you win a ✦"]'>← yep, that's me!</button>
+
+          <div class="sticky sticky--yellow sticky--intro pop" style="--d:.9s" data-depth="0.6">
+            <p class="hand">currently doodling:<br><strong>this very website ✎</strong></p>
+          </div>
+
+          <ul class="swatches pop" style="--d:1s" data-depth="0.45" aria-label="This sketchbook's colour palette">
+            <li style="--c:#F6F1E7"><span>paper</span></li>
+            <li style="--c:#24231F"><span>ink</span></li>
+            <li style="--c:#EE7F45"><span>tangerine</span></li>
+            <li style="--c:#F3D77B"><span>sunbeam</span></li>
+            <li style="--c:#8EAFBF"><span>dusk</span></li>
+          </ul>
+
+          <svg class="doodle doodle--plane draw" style="--d:1.2s" data-depth="0.9" viewBox="0 0 180 90" aria-hidden="true" focusable="false">
+            <path class="draw__path" pathLength="1" d="M4 80c22-6 40-14 52-30 10-14-4-26-14-16-10 12 6 26 24 22 22-6 40-22 62-34" stroke-dasharray="1" />
+            <use href="#d-plane" x="126" y="4" width="44" height="44"/>
+          </svg>
+
+          <svg class="doodle doodle--stars" data-depth="1.1" viewBox="0 0 80 60" aria-hidden="true" focusable="false">
+            <use href="#d-star" x="0" y="20" width="22" height="22" style="--ico-fill:#F3D77B"/>
+            <use href="#d-star" x="34" y="0" width="14" height="14"/>
+            <use href="#d-star" x="52" y="34" width="18" height="18" style="--ico-fill:#EE7F45"/>
+          </svg>
+
+          <button class="coffee pop" style="--d:1.15s" type="button" aria-label="A doodled coffee cup. Go on, click it." data-depth="0.7">
+            <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+              <g class="coffee__steam" fill="none" stroke="#24231F" stroke-width="2" stroke-linecap="round">
+                <path d="M24 18c-3-4 3-6 0-11"/><path d="M32 18c-3-4 3-6 0-11"/><path d="M40 18c-3-4 3-6 0-11"/>
+              </g>
+              <path d="M12 24h38v12c0 11-8 20-19 20S12 47 12 36z" fill="#FCFAF5" stroke="#24231F" stroke-width="2.2" stroke-linejoin="round"/>
+              <path d="M50 28h4c4 0 7 3 7 7s-3 7-7 7h-5" fill="none" stroke="#24231F" stroke-width="2.2" stroke-linecap="round"/>
+              <path d="M18 34c6 3 20 3 26 0" fill="none" stroke="#EE7F45" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+          <p class="coffee__note hand" role="status" aria-live="polite"></p>
+        </div>
+
+        <p class="hint" aria-hidden="true">
+          <span class="hint__mouse"><span></span></span>
+          <span class="hint__text hand"><span class="hint--pointer">scroll, or use ← → keys to flip pages</span><span class="hint--touch">swipe sideways to flip pages</span></span>
+        </p>
+      </div>
+    </section>
+
+    <!-- ========== 02 · A LITTLE ABOUT ME ========== -->
+    <section class="scene scene--about" id="about" data-chapter="02" data-title="About" aria-labelledby="about-title" tabindex="-1">
+      <div class="scene__inner about">
+        <div class="about__photo">
+          <figure class="polaroid polaroid--about pop" style="--d:.2s">
+            <span class="tape tape--washi tape--a" aria-hidden="true"></span>
+            <div class="polaroid__img">
+              <img src="assets/images/sketching-wireframes.webp" width="720" height="900" loading="lazy" decoding="async"
+                   alt="A designer's hand sketching website wireframes with a black pen on white paper">
+            </div>
+            <figcaption class="hand">sketch first, pixels later.</figcaption>
+          </figure>
+          <p class="annot annot--photo hand reveal" style="--d:.6s"><svg class="ico" aria-hidden="true"><use href="#i-arrow-curl"/></svg> every project starts like this — messy &amp; honest</p>
+        </div>
+
+        <div class="about__story">
+          <header class="scene-head reveal" style="--d:.05s">
+            <p class="chapter-tag"><span class="chapter-tag__num" data-sketch="circle" data-sketch-pad="6" data-sketch-seed="ch2">02</span><span class="hand">chapter two</span></p>
+            <h2 class="scene-title" id="about-title"><span class="marker">A little</span> about me</h2>
+          </header>
+          <p class="reveal" style="--d:.2s"><strong>I'm Anush — a designer who codes</strong> (or a developer who can't stop designing, depending on the day). I care about the small decisions: the spacing that lets a page breathe, the micro-interaction that makes someone smile, the label that finally makes sense.</p>
+          <p class="reveal" style="--d:.3s">My path started with doodles in the margins of school notebooks, wandered through computer science and found its home in UI/UX. Today I design and build websites for brands, start-ups and curious people — from the very first wireframe to the final deploy.</p>
+
+          <div class="mini-road reveal" style="--d:.4s">
+            <p class="mini-road__title hand">how I got here →</p>
+            <svg class="mini-road__line draw" viewBox="0 0 400 70" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+              <path class="draw__path" pathLength="1" d="M8 46c40-30 70-30 100-6s64 20 96-6 66-24 96 0 50 14 92-10" stroke-dasharray="1"/>
+            </svg>
+            <ol class="mini-road__stops">
+              <li><span class="dot"></span><b>margin doodler</b><small>school days</small></li>
+              <li><span class="dot"></span><b>CS student</b><small>logic, meet creativity</small></li>
+              <li><span class="dot"></span><b>Figma convert</b><small>pixels everywhere</small></li>
+              <li><span class="dot dot--now"></span><b>designer who codes</b><small>hello, today!</small></li>
+            </ol>
+          </div>
+        </div>
+
+        <aside class="about__side" aria-label="Philosophy, interests and fun facts">
+          <article class="notepaper torn pop" style="--d:.35s">
+            <h3 class="notepaper__title">My design philosophy</h3>
+            <blockquote class="notepaper__quote">“Good design is a conversation, <span class="accent">not a decoration.</span>”</blockquote>
+            <ol class="notepaper__list">
+              <li><b>Start with people.</b> Pixels come second.</li>
+              <li><b>Sketch first.</b> Ugly ideas are welcome on paper.</li>
+              <li><b>Sweat the details</b> nobody notices — they'll feel them.</li>
+            </ol>
+          </article>
+
+          <div class="interests reveal" style="--d:.5s">
+            <h3 class="interests__title hand">things I love <span aria-hidden="true">♡</span></h3>
+            <ul class="interests__list">
+              <li data-doodle-note="35mm film & street corners"><svg class="ico" aria-hidden="true"><use href="#n-camera"/></svg><span>Photography</span></li>
+              <li data-doodle-note="lo-fi beats on repeat"><svg class="ico" aria-hidden="true"><use href="#n-music"/></svg><span>Music</span></li>
+              <li data-doodle-note="11 plants, 0 casualties (lately)"><svg class="ico" aria-hidden="true"><use href="#n-plant"/></svg><span>Plants</span></li>
+              <li data-doodle-note="sketching new cities"><svg class="ico" aria-hidden="true"><use href="#n-compass"/></svg><span>Travel</span></li>
+              <li data-doodle-note="design books & mystery novels"><svg class="ico" aria-hidden="true"><use href="#n-book"/></svg><span>Books</span></li>
+              <li data-doodle-note="chai > coffee (don't tell the cup)"><svg class="ico" aria-hidden="true"><use href="#n-cup"/></svg><span>Chai</span></li>
+            </ul>
+          </div>
+
+          <div class="sticky sticky--blue sticky--facts pop" style="--d:.65s">
+            <h3 class="hand">fun facts ✦</h3>
+            <ul class="hand">
+              <li>I've filled 14 sketchbooks (and counting)</li>
+              <li>I name every Figma layer. Yes, every one.</li>
+              <li>I can't walk past a stationery shop.</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ========== 03 · MY CREATIVE TOOLBOX ========== -->
+    <section class="scene scene--toolbox" id="toolbox" data-chapter="03" data-title="Toolbox" aria-labelledby="toolbox-title" tabindex="-1">
+      <div class="scene__inner toolbox">
+        <header class="toolbox__head">
+          <div class="scene-head reveal" style="--d:.05s">
+            <p class="chapter-tag"><span class="chapter-tag__num" data-sketch="circle" data-sketch-pad="6" data-sketch-seed="ch3">03</span><span class="hand">chapter three</span></p>
+            <h2 class="scene-title" id="toolbox-title">My creative <span class="marker marker--blue">toolbox</span></h2>
+            <span class="sticker sticker--title" data-sticker style="--r:-10deg; --d:1.3s" aria-hidden="true"><svg><use href="#s-ps"/></svg></span>
+          </div>
+          <p class="toolbox__intro reveal" style="--d:.15s">No skill bars or made-up percentages here — just the tools I reach for, and how comfortable I am with each one. <span class="hand">tap a tool for a note ✎ — and psst, the big stickers peel off. drag 'em around!</span></p>
+          <div class="legend reveal" style="--d:.25s">
+            <p class="legend__title hand">legend</p>
+            <ul aria-label="Legend">
+              <li><span class="stars" aria-hidden="true">★★★</span> daily driver</li>
+              <li><span class="stars" aria-hidden="true">★★<i>★</i></span> comfy</li>
+              <li><span class="stars" aria-hidden="true">★<i>★★</i></span> exploring</li>
+            </ul>
+            <p class="explored hand"><span class="explored__label">peeked at</span> <b class="explored__count">0</b> / <span class="explored__total">19</span> tools</p>
+            <span class="explored__bar" aria-hidden="true"><span class="explored__fill"></span></span>
+            <span class="sticker sticker--legend" data-sticker style="--r:12deg; --d:1.4s" aria-hidden="true"><svg><use href="#s-html"/></svg></span>
+          </div>
+        </header>
+
+        <div class="kits">
+          <article class="kit kit--design pop" style="--d:.2s; --tilt:-1.2deg">
+            <span class="tape tape--blue" aria-hidden="true"></span>
+            <span class="sticker sticker--corner" data-sticker style="--r:12deg; --d:.9s" aria-hidden="true"><svg><use href="#s-figma"/></svg></span>
+            <span class="sticker sticker--corner-b" data-sticker style="--r:-10deg; --d:1.05s" aria-hidden="true"><svg><use href="#s-ai"/></svg></span>
+            <div class="kit__paper" data-sketch="box" data-sketch-seed="kit-a">
+              <header class="kit__head">
+                <span class="kit__letter hand" aria-hidden="true">A</span>
+                <div>
+                  <h3 class="kit__title"><span class="marker marker--blue">Design</span></h3>
+                  <p class="kit__sub hand">making it look &amp; feel right</p>
+                </div>
+              </header>
+              <ul class="tools">
+                <li style="--brand:#A259FF"><button class="tool" type="button" aria-describedby="tip-figma"><span class="tool__icon" aria-hidden="true"><svg><use href="#s-figma"/></svg></span>Figma<span class="stars" aria-label="daily driver">★★★</span></button><span class="tool__tip hand" role="tooltip" id="tip-figma">Components, auto-layout &amp; variables — where every idea gets its first pixels.</span></li>
+                <li style="--brand:#31A8FF"><button class="tool" type="button" aria-describedby="tip-ps"><span class="tool__icon" aria-hidden="true"><svg><use href="#s-ps"/></svg></span>Photoshop<span class="stars" aria-label="comfortable">★★<i>★</i></span></button><span class="tool__tip hand" role="tooltip" id="tip-ps">Photo retouching, mood boards &amp; texture work.</span></li>
+                <li style="--brand:#FF9A00"><button class="tool" type="button" aria-describedby="tip-ai"><span class="tool__icon" aria-hidden="true"><svg><use href="#s-ai"/></svg></span>Illustrator<span class="stars" aria-label="comfortable">★★<i>★</i></span></button><span class="tool__tip hand" role="tooltip" id="tip-ai">Icons, illustrations &amp; logos with crisp vectors.</span></li>
+                <li style="--brand:#F28AB2"><button class="tool" type="button" aria-describedby="tip-uiux"><span class="tool__icon" aria-hidden="true"><svg><use href="#s-uiux"/></svg></span>UI/UX Design<span class="stars" aria-label="daily driver">★★★</span></button><span class="tool__tip hand" role="tooltip" id="tip-uiux">User flows, journeys &amp; interfaces that simply make sense.</span></li>
+                <li style="--brand:#4F7486"><button class="tool" type="button" aria-describedby="tip-wire"><span class="tool__icon" aria-hidden="true"><svg><use href="#s-wire"/></svg></span>Wireframing<span class="stars" aria-label="daily driver">★★★</span></button><span class="tool__tip hand" role="tooltip" id="tip-wire">Paper first, then low-fi frames. Always.</span></li>
+                <li style="--brand:#8B6CF0"><button class="tool" type="button" aria-describedby="tip-proto"><span class="tool__icon" aria-hidden="true"><svg><use href="#s-proto"/></svg></span>Prototyping<span class="stars" aria-label="daily driver">★★★</span></button><span class="tool__tip hand" role="tooltip" id="tip-proto">Clickable flows to test ideas before a single line of code.</span></li>
+                <li style="--brand:#E0B43C"><button class="tool" type="button" aria-describedby="tip-ds"><span class="tool__icon" aria-hidden="true"><svg><use href="#s-ds"/></svg></span>Design Systems<span class="stars" aria-label="comfortable">★★<i>★</i></span></button><span class="tool__tip hand" role="tooltip" id="tip-ds">Tokens, components &amp; docs that keep teams consistent.</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="kit kit--dev pop" style="--d:.32s; --tilt:.8deg">
+            <span class="tape tape--green" aria-hidden="true"></span>
+            <span class="sticker sticker--corner" data-sticker style="--r:-9deg; --d:1s" aria-hidden="true"><svg><use href="#s-js"/></svg></span>
+            <span class="sticker sticker--corner-b" data-sticker style="--r:14deg; --d:1.15s" aria-hidden="true"><svg><use href="#s-css"/></svg></span>
+            <div class="kit__paper" data-sketch="box" data-sketch-seed="kit-b">
+              <header class="kit__head">
+                <span class="kit__letter hand" aria-hidden="true">B</span>
+                <div>
+                  <h3 class="kit__title"><span class="marker marker--green">Development</span></h3>
+                  <p class="kit__sub hand">turning pixels into real things</p>
+                </div>
+              </header>
+              <ul class="tools">
+                <li style="--brand:#E44D26"><button class="tool" type="button" aria-describedby="tip-html"><span class="tool__icon" aria-hidden="true"><svg><use href="#s-html"/></svg></span>HTML<span class="stars" aria-label="daily driver">★★★</span></button><span class="tool__tip hand" role="tooltip" id="tip-html">Semantic, accessible markup — the foundation of everything.</span></li>
+                <li style="--brand:#2965F1"><button class="tool" type="button" aria-describedby="tip-css"><span class="tool__icon" aria-hidden="true"><svg><use href="#s-css"/></svg></span>CSS<span class="stars" aria-label="daily driver">★★★</span></button><span class="tool__tip hand" role="tooltip" id="tip-css">Grid, Flexbox, custom properties &amp; a lot of love.</span></li>
+                <li style="--brand:#CD6799"><button class="tool" type="button" aria-describedby="tip-scss"><span class="tool__icon" aria-hidden="true"><svg><use href="#s-scss"/></svg></span>SCSS<span class="stars" aria-label="comfortable">★★<i>★</i></span></button><span class="tool__tip hand" role="tooltip" id="tip-scss">Mixins &amp; partials for tidy, scalable styles.</span></li>
+                <li style="--brand:#E8C511"><button class="tool" type="button" aria-describedby="tip-js"><span class="tool__icon" aria-hidden="true"><svg><use href="#s-js"/></svg></span>JavaScript<span class="stars" aria-label="daily driver">★★★</span></button><span class="tool__tip hand" role="tooltip" id="tip-js">Vanilla JS for interactions, DOM magic &amp; APIs (this site included!).</span></li>
+                <li style="--brand:#0769AD"><button class="tool" type="button" aria-describedby="tip-jq"><span class="tool__icon" aria-hidden="true"><svg><use href="#s-jquery"/></svg></span>jQuery<span class="stars" aria-label="comfortable">★★<i>★</i></span></button><span class="tool__tip hand" role="tooltip" id="tip-jq">Maintaining &amp; extending existing projects.</span></li>
+                <li style="--brand:#7952B3"><button class="tool" type="button" aria-describedby="tip-bs"><span class="tool__icon" aria-hidden="true"><svg><use href="#s-bootstrap"/></svg></span>Bootstrap<span class="stars" aria-label="comfortable">★★<i>★</i></span></button><span class="tool__tip hand" role="tooltip" id="tip-bs">Rapid, reliable layouts when deadlines are tight.</span></li>
+                <li style="--brand:#38BDF8"><button class="tool" type="button" aria-describedby="tip-tw"><span class="tool__icon" aria-hidden="true"><svg><use href="#s-tailwind"/></svg></span>Tailwind CSS<span class="stars" aria-label="comfortable">★★<i>★</i></span></button><span class="tool__tip hand" role="tooltip" id="tip-tw">Utility-first styling for fast, consistent UI.</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="kit kit--creative pop" style="--d:.44s; --tilt:-.6deg">
+            <span class="tape tape--orange" aria-hidden="true"></span>
+            <span class="sticker sticker--corner" data-sticker style="--r:10deg; --d:1.1s" aria-hidden="true"><svg><use href="#s-gsap"/></svg></span>
+            <span class="sticker sticker--corner-c" data-sticker style="--r:-14deg; --d:1.25s" aria-hidden="true"><svg><use href="#s-three"/></svg></span>
+            <div class="kit__paper" data-sketch="box" data-sketch-seed="kit-c">
+              <header class="kit__head">
+                <span class="kit__letter hand" aria-hidden="true">C</span>
+                <div>
+                  <h3 class="kit__title"><span class="marker marker--orange">Creative Dev</span></h3>
+                  <p class="kit__sub hand">making things move</p>
+                </div>
+              </header>
+              <ul class="tools">
+                <li style="--brand:#6FB800"><button class="tool" type="button" aria-describedby="tip-gsap"><span class="tool__icon" aria-hidden="true"><svg><use href="#s-gsap"/></svg></span>GSAP<span class="stars" aria-label="comfortable">★★<i>★</i></span></button><span class="tool__tip hand" role="tooltip" id="tip-gsap">Timelines &amp; easing for buttery-smooth animation.</span></li>
+                <li style="--brand:#24231F"><button class="tool" type="button" aria-describedby="tip-three"><span class="tool__icon" aria-hidden="true"><svg><use href="#s-three"/></svg></span>Three.js<span class="stars" aria-label="exploring">★<i>★★</i></span></button><span class="tool__tip hand" role="tooltip" id="tip-three">Experimenting with 3D scenes in the browser.</span></li>
+                <li style="--brand:#2FA84F"><button class="tool" type="button" aria-describedby="tip-st"><span class="tool__icon" aria-hidden="true"><svg><use href="#s-scroll"/></svg></span>ScrollTrigger<span class="stars" aria-label="comfortable">★★<i>★</i></span></button><span class="tool__tip hand" role="tooltip" id="tip-st">Scroll-driven storytelling &amp; reveals.</span></li>
+                <li style="--brand:#EE7F45"><button class="tool" type="button" aria-describedby="tip-ia"><span class="tool__icon" aria-hidden="true"><svg><use href="#s-anim"/></svg></span>Interactive Animations<span class="stars" aria-label="daily driver">★★★</span></button><span class="tool__tip hand" role="tooltip" id="tip-ia">Micro-interactions that make interfaces feel alive.</span></li>
+                <li style="--brand:#4F7486"><button class="tool" type="button" aria-describedby="tip-rd"><span class="tool__icon" aria-hidden="true"><svg><use href="#s-responsive"/></svg></span>Responsive Development<span class="stars" aria-label="daily driver">★★★</span></button><span class="tool__tip hand" role="tooltip" id="tip-rd">Layouts that work from a 320px phone to a 4K screen.</span></li>
+              </ul>
+              <div class="sticky sticky--yellow sticky--learning">
+                <p class="hand"><strong>currently learning:</strong> WebGL shaders &amp; motion design 🌀</p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <button class="stickers-reset hand" type="button" hidden>↺ tidy up the stickers</button>
+      </div>
+    </section>
+
+    <!-- ========== 04 · SELECTED PROJECTS — sheet 1 ========== -->
+    <section class="scene scene--projects" id="projects" data-chapter="04" data-title="Work" aria-labelledby="projects-title" tabindex="-1">
+      <div class="scene__inner projects projects--a">
+        <header class="projects__head">
+          <div class="scene-head reveal" style="--d:.05s">
+            <p class="chapter-tag"><span class="chapter-tag__num" data-sketch="circle" data-sketch-pad="6" data-sketch-seed="ch4">04</span><span class="hand">chapter four · sheet 1 of 2</span></p>
+            <h2 class="scene-title" id="projects-title">Selected <span class="marker marker--orange">projects</span></h2>
+          </div>
+          <p class="annot hand reveal" style="--d:.2s">a few favourites, pinned here so I don't lose them <svg class="ico" aria-hidden="true"><use href="#i-arrow-r"/></svg></p>
+        </header>
+
+        <!-- Project 01 — browser window card -->
+        <article class="project project--browser project--feature pop" data-project="kiln" style="--d:.15s; --tilt:-1deg" aria-labelledby="p1-title">
+          <span class="tape tape--a" aria-hidden="true"></span>
+          <span class="tape tape--b" aria-hidden="true"></span>
+          <span class="project__no hand" aria-hidden="true">no. 01</span>
+          <div class="project__media" data-sketch="box" data-sketch-seed="p1">
+            <div class="browser"><span class="browser__dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="browser__url">kilnandco.store</span></div>
+            <div class="project__img">
+              <img src="assets/projects/kiln.webp" srcset="assets/projects/kiln-sm.webp 640w, assets/projects/kiln.webp 1280w" sizes="(min-width: 1100px) 44vw, 92vw" width="1280" height="800" loading="lazy" decoding="async"
+                   alt="Kiln &amp; Co. homepage: the headline 'Made slowly, by hand' next to a white ceramic vase, with a row of bestselling cups, vases and plates below">
+            </div>
+          </div>
+          <div class="project__body">
+            <p class="project__cat"><span class="label label--yellow">E-commerce</span> UI/UX &amp; frontend · 2026</p>
+            <h3 class="project__title" id="p1-title">Kiln &amp; Co.</h3>
+            <p class="project__desc">A calm, tactile storefront for an independent ceramics studio — big imagery, honest product stories and a three-step checkout.</p>
+            <ul class="tags" aria-label="Technologies used"><li>Figma</li><li>HTML</li><li>SCSS</li><li>JavaScript</li></ul>
+            <button class="btn-sketch project__open" type="button" data-open-project="kiln" data-sketch="box" data-sketch-seed="b1" data-sketch-passes="1">View project <svg class="ico" aria-hidden="true"><use href="#i-arrow-r"/></svg></button>
+            <p class="project__aside hand" aria-hidden="true">↖ my favourite checkout flow</p>
+          </div>
+          <template class="project__details">
+            <img class="case__img" src="assets/projects/kiln.webp" width="1280" height="800" alt="Kiln &amp; Co. homepage with a hero headline, a ceramic vase photograph and bestselling products">
+            <dl class="case__meta">
+              <div><dt>Role</dt><dd>UI/UX design &amp; frontend</dd></div>
+              <div><dt>Timeline</dt><dd>6 weeks</dd></div>
+              <div><dt>Type</dt><dd>Concept project</dd></div>
+            </dl>
+            <h3>The challenge</h3>
+            <p>Independent makers often end up on cluttered template stores where the products — and the story behind them — get lost. The goal: a shop that feels as handmade as the ceramics themselves, without slowing anyone down at checkout.</p>
+            <h3>My approach</h3>
+            <p>I mapped the buying journey, ran quick paper sketches of the product page and built a warm, minimal design system from the studio's clay tones. The build uses semantic HTML, a modular SCSS architecture and a lightweight vanilla-JS cart with an accessible three-step checkout.</p>
+            <h3>The result</h3>
+            <p>A storefront with clearer navigation, generous imagery and a checkout that takes under a minute — fully responsive and keyboard friendly.</p>
+          </template>
+        </article>
+
+        <div class="projects__stack">
+        <!-- Project 02 — polaroid with paper clip -->
+        <article class="project project--polaroid pop" data-project="hallo" style="--d:.3s; --tilt:1.6deg" aria-labelledby="p2-title">
+          <svg class="clip" aria-hidden="true" focusable="false"><use href="#d-clip"/></svg>
+          <span class="project__no hand" aria-hidden="true">no. 02</span>
+          <div class="project__media" data-sketch="box" data-sketch-seed="p2">
+            <div class="project__img">
+              <img src="assets/projects/hallo.webp" srcset="assets/projects/hallo-sm.webp 640w, assets/projects/hallo.webp 1280w" sizes="(min-width: 1100px) 22vw, 92vw" width="1280" height="800" loading="lazy" decoding="async"
+                   alt="Hallo Studio agency website: a dark page with the oversized headline 'We make brands people can't stop talking about' and lime-green accents">
+            </div>
+          </div>
+          <div class="project__body">
+            <p class="project__cat"><span class="label label--blue">Creative agency</span> web design · 2025</p>
+            <h3 class="project__title" id="p2-title">Hallo Studio</h3>
+            <p class="project__desc">A bold, type-led site for a brand studio, with a living work grid and scroll-triggered reveals.</p>
+            <ul class="tags" aria-label="Technologies used"><li>Figma</li><li>GSAP</li><li>ScrollTrigger</li><li>HTML/CSS</li></ul>
+            <button class="btn-sketch project__open" type="button" data-open-project="hallo" data-sketch="box" data-sketch-seed="b2" data-sketch-passes="1">View project <svg class="ico" aria-hidden="true"><use href="#i-arrow-r"/></svg></button>
+          </div>
+          <template class="project__details">
+            <img class="case__img" src="assets/projects/hallo.webp" width="1280" height="800" alt="Hallo Studio homepage with an oversized headline, a 3D gradient image pill and project tiles">
+            <dl class="case__meta">
+              <div><dt>Role</dt><dd>Web design &amp; creative development</dd></div>
+              <div><dt>Timeline</dt><dd>4 weeks</dd></div>
+              <div><dt>Type</dt><dd>Concept project</dd></div>
+            </dl>
+            <h3>The challenge</h3>
+            <p>Agency websites tend to look alike — a hero video, a grid, a contact form. Hallo needed a site with the same confidence as the brands it builds.</p>
+            <h3>My approach</h3>
+            <p>Typography does the heavy lifting: oversized Syne headlines, image “pills” tucked inside sentences and a single electric-lime accent. GSAP and ScrollTrigger reveal the work grid as you scroll, with reduced-motion fallbacks baked in.</p>
+            <h3>The result</h3>
+            <p>A memorable, high-contrast site that feels editorial on desktop and stays fast and readable on phones.</p>
+          </template>
+        </article>
+
+        <!-- Project 03 — postcard with stamp -->
+        <article class="project project--postcard pop" data-project="saltwater" style="--d:.45s; --tilt:-1.8deg" aria-labelledby="p3-title">
+          <span class="project__no hand" aria-hidden="true">no. 03</span>
+          <span class="postage" aria-hidden="true"><span>✈</span><small>Par avion</small></span>
+          <div class="project__media" data-sketch="box" data-sketch-seed="p3">
+            <div class="project__img">
+              <img src="assets/projects/saltwater.webp" srcset="assets/projects/saltwater-sm.webp 640w, assets/projects/saltwater.webp 1280w" sizes="(min-width: 1100px) 22vw, 92vw" width="1280" height="800" loading="lazy" decoding="async"
+                   alt="Saltwater Stays travel website: a tropical resort pool photograph behind the headline 'Find your slow tide' and a hotel booking search bar">
+            </div>
+          </div>
+          <div class="project__body">
+            <p class="project__cat"><span class="label label--green">Travel &amp; hospitality</span> UX &amp; UI · 2025</p>
+            <h3 class="project__title" id="p3-title">Saltwater Stays</h3>
+            <p class="project__desc">Booking boutique coastal hotels, designed around a two-tap search and dreamy full-bleed photography.</p>
+            <ul class="tags" aria-label="Technologies used"><li>Figma</li><li>Tailwind CSS</li><li>JavaScript</li></ul>
+            <button class="btn-sketch project__open" type="button" data-open-project="saltwater" data-sketch="box" data-sketch-seed="b3" data-sketch-passes="1">View project <svg class="ico" aria-hidden="true"><use href="#i-arrow-r"/></svg></button>
+          </div>
+          <template class="project__details">
+            <img class="case__img" src="assets/projects/saltwater.webp" width="1280" height="800" alt="Saltwater Stays homepage with a resort photograph, headline and booking widget, plus featured stays below">
+            <dl class="case__meta">
+              <div><dt>Role</dt><dd>UX research, UI design &amp; frontend</dd></div>
+              <div><dt>Timeline</dt><dd>5 weeks</dd></div>
+              <div><dt>Type</dt><dd>Concept project</dd></div>
+            </dl>
+            <h3>The challenge</h3>
+            <p>Travellers bounce between tabs comparing dates, prices and photos. Boutique hotels need to feel special without making the booking flow harder.</p>
+            <h3>My approach</h3>
+            <p>I interviewed five frequent travellers, distilled the search into one sticky widget and let full-bleed photography set the mood. Built with Tailwind CSS and a small JavaScript date and guest picker.</p>
+            <h3>The result</h3>
+            <p>A calm, inspiring browse-and-book experience where the search is always one tap away.</p>
+          </template>
+        </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 04 · SELECTED PROJECTS — sheet 2 ========== -->
+    <section class="scene scene--projects scene--projects-b" id="more-projects" data-chapter="04" data-title="Work" aria-labelledby="more-projects-title" tabindex="-1">
+      <div class="scene__inner projects projects--b">
+        <header class="projects__head">
+          <div class="scene-head reveal" style="--d:.05s">
+            <p class="chapter-tag"><span class="chapter-tag__num" data-sketch="circle" data-sketch-pad="6" data-sketch-seed="ch4b">04</span><span class="hand">chapter four · sheet 2 of 2</span></p>
+            <h2 class="scene-title" id="more-projects-title">More from the <span class="marker">sketchbook</span></h2>
+          </div>
+          <a class="annot annot--back hand reveal" style="--d:.2s" href="#projects" data-goto="projects"><svg class="ico" aria-hidden="true"><use href="#i-arrow-l"/></svg> flip back to sheet one</a>
+        </header>
+
+        <!-- Project 04 — magazine cut-out -->
+        <article class="project project--cutout pop" data-project="lune" style="--d:.15s; --tilt:-2deg" aria-labelledby="p4-title">
+          <span class="tape tape--washi tape--a" aria-hidden="true"></span>
+          <span class="project__no hand" aria-hidden="true">no. 04</span>
+          <div class="project__media torn">
+            <div class="project__img">
+              <img src="assets/projects/lune.webp" srcset="assets/projects/lune-sm.webp 640w, assets/projects/lune.webp 1280w" sizes="(min-width: 1100px) 28vw, 92vw" width="1280" height="800" loading="lazy" decoding="async"
+                   alt="Atelier Lune fashion lookbook: an editorial grid with the serif headline 'The quiet bloom' and photographs of models in bright summer outfits">
+            </div>
+          </div>
+          <div class="project__body">
+            <p class="project__cat"><span class="label label--rose">Fashion &amp; lifestyle</span> art direction · 2025</p>
+            <h3 class="project__title" id="p4-title">Atelier Lune</h3>
+            <p class="project__desc">An editorial lookbook for a slow-fashion label, inspired by print magazines and asymmetric grids.</p>
+            <ul class="tags" aria-label="Technologies used"><li>Figma</li><li>Photoshop</li><li>CSS Grid</li><li>JavaScript</li></ul>
+            <button class="btn-sketch project__open" type="button" data-open-project="lune" data-sketch="box" data-sketch-seed="b4" data-sketch-passes="1">View project <svg class="ico" aria-hidden="true"><use href="#i-arrow-r"/></svg></button>
+          </div>
+          <template class="project__details">
+            <img class="case__img" src="assets/projects/lune.webp" width="1280" height="800" alt="Atelier Lune lookbook layout with large serif typography and an asymmetric photo grid">
+            <dl class="case__meta">
+              <div><dt>Role</dt><dd>Art direction, UI design &amp; frontend</dd></div>
+              <div><dt>Timeline</dt><dd>4 weeks</dd></div>
+              <div><dt>Type</dt><dd>Concept project</dd></div>
+            </dl>
+            <h3>The challenge</h3>
+            <p>Most fashion e-commerce feels like a catalogue. Lune wanted its seasonal collection to read like a magazine spread — slow, beautiful and still shoppable.</p>
+            <h3>My approach</h3>
+            <p>I art-directed the photography crops in Photoshop and built an asymmetric CSS Grid that reflows gracefully into a single-column story on phones. A Bodoni display face and generous whitespace keep it calm.</p>
+            <h3>The result</h3>
+            <p>A lookbook that feels like turning pages, with every look linked straight to its product.</p>
+          </template>
+        </article>
+
+        <!-- Project 05 — hand-drawn phone -->
+        <article class="project project--phone pop" data-project="sprout" style="--d:.3s; --tilt:2deg" aria-labelledby="p5-title">
+          <span class="project__no hand" aria-hidden="true">no. 05</span>
+          <div class="phone-frame">
+            <div class="phone-frame__body">
+              <img src="assets/projects/sprout-screen.webp" width="495" height="1050" loading="lazy" decoding="async"
+                   alt="Sprout habit-tracker app home screen: a greeting, a 4 of 6 habits progress ring and a checklist of daily habits">
+            </div>
+          </div>
+          <div class="project__body">
+            <p class="project__cat"><span class="label label--green">Mobile app</span> product design · 2025</p>
+            <h3 class="project__title" id="p5-title">Sprout</h3>
+            <p class="project__desc">A friendly habit tracker where every habit you keep helps a little virtual garden grow.</p>
+            <ul class="tags" aria-label="Technologies used"><li>Figma</li><li>Prototyping</li><li>Design system</li></ul>
+            <button class="btn-sketch project__open" type="button" data-open-project="sprout" data-sketch="box" data-sketch-seed="b5" data-sketch-passes="1">View project <svg class="ico" aria-hidden="true"><use href="#i-arrow-r"/></svg></button>
+          </div>
+          <template class="project__details">
+            <img class="case__img" src="assets/projects/sprout.webp" width="1280" height="800" alt="Three Sprout app screens: today's habits, a reading streak calendar and a growing virtual plant">
+            <dl class="case__meta">
+              <div><dt>Role</dt><dd>Product &amp; interaction design</dd></div>
+              <div><dt>Timeline</dt><dd>8 weeks</dd></div>
+              <div><dt>Type</dt><dd>Concept project</dd></div>
+            </dl>
+            <h3>The challenge</h3>
+            <p>Habit apps are great at guilt and bad at encouragement. Streaks break, motivation drops, the app gets deleted.</p>
+            <h3>My approach</h3>
+            <p>I reframed progress as care: every completed habit waters a plant in your garden, and a missed day only slows growth instead of resetting it. I designed a small component library and tested a clickable Figma prototype with eight people.</p>
+            <h3>The result</h3>
+            <p>A gentle, colourful app concept with a reusable design system — testers described it as “the first habit app that doesn't nag”.</p>
+          </template>
+        </article>
+
+        <!-- Project 06 — blueprint on graph paper, pinned -->
+        <article class="project project--blueprint pop" data-project="orbit" style="--d:.45s; --tilt:-.8deg" aria-labelledby="p6-title">
+          <svg class="pushpin" aria-hidden="true" focusable="false"><use href="#d-pushpin"/></svg>
+          <span class="project__no hand" aria-hidden="true">no. 06</span>
+          <div class="project__media" data-sketch="box" data-sketch-seed="p6">
+            <div class="project__img">
+              <img src="assets/projects/orbit.webp" srcset="assets/projects/orbit-sm.webp 640w, assets/projects/orbit.webp 1280w" sizes="(min-width: 1100px) 36vw, 92vw" width="1280" height="800" loading="lazy" decoding="async"
+                   alt="Orbit Analytics dashboard in dark mode: KPI cards with sparklines, a purple and cyan traffic chart, a platform donut chart and a live events list">
+            </div>
+          </div>
+          <div class="project__body">
+            <p class="project__cat"><span class="label label--blue">Product dashboard</span> UI &amp; data viz · 2026</p>
+            <h3 class="project__title" id="p6-title">Orbit Analytics</h3>
+            <p class="project__desc">A futuristic analytics dashboard that turns dense product data into calm, glanceable insights.</p>
+            <ul class="tags" aria-label="Technologies used"><li>Figma</li><li>JavaScript</li><li>SVG charts</li><li>Three.js</li></ul>
+            <button class="btn-sketch project__open" type="button" data-open-project="orbit" data-sketch="box" data-sketch-seed="b6" data-sketch-passes="1">View project <svg class="ico" aria-hidden="true"><use href="#i-arrow-r"/></svg></button>
+            <p class="project__aside hand" aria-hidden="true">dark mode, obviously ↗</p>
+          </div>
+          <template class="project__details">
+            <img class="case__img" src="assets/projects/orbit.webp" width="1280" height="800" alt="Orbit Analytics dark dashboard with KPI cards, an area chart, a donut chart and live events">
+            <dl class="case__meta">
+              <div><dt>Role</dt><dd>UI design &amp; data visualisation</dd></div>
+              <div><dt>Timeline</dt><dd>6 weeks</dd></div>
+              <div><dt>Type</dt><dd>Concept project</dd></div>
+            </dl>
+            <h3>The challenge</h3>
+            <p>Product teams drown in charts. The brief: surface what matters right now, without hiding the depth analysts need.</p>
+            <h3>My approach</h3>
+            <p>I prioritised four KPIs with sparklines, one hero chart and a live events feed, then built a dark, high-contrast visual language with accessible colour pairs. Charts are hand-rolled SVG, with a Three.js orb experiment for the empty state.</p>
+            <h3>The result</h3>
+            <p>A focused “mission control” view that answers “how are we doing?” in under five seconds.</p>
+          </template>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ========== 05 · MY JOURNEY & ACHIEVEMENTS ========== -->
+    <section class="scene scene--journey" id="journey" data-chapter="05" data-title="Journey" aria-labelledby="journey-title" tabindex="-1">
+      <div class="scene__inner journey">
+        <header class="journey__head">
+          <div class="scene-head reveal" style="--d:.05s">
+            <p class="chapter-tag"><span class="chapter-tag__num" data-sketch="circle" data-sketch-pad="6" data-sketch-seed="ch5">05</span><span class="hand">chapter five</span></p>
+            <h2 class="scene-title" id="journey-title">My journey <span class="amp">&amp;</span> <span class="marker marker--green">achievements</span></h2>
+          </div>
+          <p class="annot hand reveal" style="--d:.2s">the road so far — still being drawn ✎</p>
+        </header>
+
+        <div class="road-map" id="road-map">
+          <svg class="road-map__road" aria-hidden="true" focusable="false">
+            <path class="road__edge"/><path class="road__fill"/><path class="road__dash"/>
+          </svg>
+          <ol class="milestones">
+            <li class="milestone milestone--up pop" style="--d:.15s">
+              <span class="milestone__pin" data-road-pin><svg aria-hidden="true" focusable="false"><use href="#d-mortar"/></svg></span>
+              <div class="milestone__card" data-sketch="box" data-sketch-passes="1" data-sketch-seed="m1">
+                <p class="milestone__date hand">2019</p>
+                <p class="milestone__type">Education</p>
+                <h3>Started my B.Sc. in Computer Science</h3>
+                <p>Your University, City — where logic and creativity became friends.</p>
+              </div>
+            </li>
+            <li class="milestone milestone--down pop" style="--d:.25s">
+              <span class="milestone__pin" data-road-pin><svg aria-hidden="true" focusable="false"><use href="#d-bulb"/></svg></span>
+              <div class="milestone__card" data-sketch="box" data-sketch-passes="1" data-sketch-seed="m2">
+                <p class="milestone__date hand">2021</p>
+                <p class="milestone__type">Milestone</p>
+                <h3>Opened Figma for the first time</h3>
+                <p>Redesigned our college fest website… and never looked back.</p>
+              </div>
+            </li>
+            <li class="milestone milestone--up pop" style="--d:.35s">
+              <span class="milestone__pin" data-road-pin><svg aria-hidden="true" focusable="false"><use href="#d-star" style="--ico-fill:#F3D77B"/></svg></span>
+              <div class="milestone__card" data-sketch="box" data-sketch-passes="1" data-sketch-seed="m3">
+                <span class="stamp" aria-hidden="true">certified</span>
+                <p class="milestone__date hand">2022</p>
+                <p class="milestone__type">Certification</p>
+                <h3>Professional UX Design Certificate</h3>
+                <p>Research, wireframing, prototyping &amp; usability testing.</p>
+              </div>
+            </li>
+            <li class="milestone milestone--down pop" style="--d:.45s">
+              <span class="milestone__pin" data-road-pin><svg aria-hidden="true" focusable="false"><use href="#d-brief"/></svg></span>
+              <div class="milestone__card" data-sketch="box" data-sketch-passes="1" data-sketch-seed="m4">
+                <p class="milestone__date hand">2023 — now</p>
+                <p class="milestone__type">Experience</p>
+                <h3>Freelance UI/UX Designer</h3>
+                <p>Websites &amp; brand pages for local businesses, cafés and creators.</p>
+              </div>
+            </li>
+            <li class="milestone milestone--up pop" style="--d:.55s">
+              <span class="milestone__pin" data-road-pin><svg aria-hidden="true" focusable="false"><use href="#d-ribbon"/></svg></span>
+              <div class="milestone__card" data-sketch="box" data-sketch-passes="1" data-sketch-seed="m5">
+                <span class="badge-burst" aria-hidden="true">1st!</span>
+                <p class="milestone__date hand">2024</p>
+                <p class="milestone__type">Achievement</p>
+                <h3>Best UI award — college hackathon</h3>
+                <p>48 hours, 3 teammates, a lot of chai and one happy jury.</p>
+              </div>
+            </li>
+            <li class="milestone milestone--down pop" style="--d:.65s">
+              <span class="milestone__pin" data-road-pin><svg aria-hidden="true" focusable="false"><use href="#d-rocket"/></svg></span>
+              <div class="milestone__card" data-sketch="box" data-sketch-passes="1" data-sketch-seed="m6">
+                <p class="milestone__date hand">2026</p>
+                <p class="milestone__type">Internship</p>
+                <h3>Web Development Intern · Auspify</h3>
+                <p>Building responsive, real-world websites — like this one.</p>
+              </div>
+            </li>
+            <li class="milestone milestone--up milestone--now pop" style="--d:.75s">
+              <span class="milestone__pin" data-road-pin><svg aria-hidden="true" focusable="false"><use href="#d-flag"/></svg></span>
+              <div class="milestone__card" data-sketch="box" data-sketch-passes="1" data-sketch-seed="m7">
+                <p class="milestone__date hand">2026 · you are here</p>
+                <p class="milestone__type">Notable project</p>
+                <h3>This sketchbook portfolio</h3>
+                <p>Hand-drawn, horizontally scrolling, built with vanilla HTML, CSS &amp; JS.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <button class="snail" type="button" aria-label="A tiny doodled snail. Click to see what it's carrying." aria-expanded="false" aria-controls="snail-note">
+          <svg aria-hidden="true" focusable="false"><use href="#d-snail"/></svg>
+        </button>
+        <div class="sticky sticky--rose secret" id="snail-note" hidden>
+          <p class="hand"><strong>You found the snail! 🐌</strong><br>Slow &amp; steady ships the best pixels. Thanks for exploring every corner.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 06 · LET'S CONNECT ========== -->
+    <section class="scene scene--contact" id="contact" data-chapter="06" data-title="Say hi" aria-labelledby="contact-title" tabindex="-1">
+      <div class="scene__inner contact">
+        <article class="letter pop" style="--d:.1s">
+          <div class="letter__paper" data-sketch="box" data-sketch-seed="letter">
+            <p class="chapter-tag"><span class="chapter-tag__num" data-sketch="circle" data-sketch-pad="6" data-sketch-seed="ch6">06</span><span class="hand">the last page</span></p>
+            <h2 class="scene-title letter__title" id="contact-title">Let's make something <span class="marker">wonderful</span> together.</h2>
+            <p class="letter__date hand" data-today>4 November 2026</p>
+            <p class="letter__dear hand">Dear you,</p>
+            <p>You made it to the last page of my sketchbook — thank you for flipping all the way through! Whether you have a project in mind, an internship or role to fill, or just want to talk design, my inbox is always open.</p>
+            <p class="letter__signoff hand">with warm regards &amp; sharp pencils,</p>
+            <svg class="signature draw" viewBox="0 0 220 80" role="img" aria-label="Signature: Anush">
+              <path class="draw__path" pathLength="1" stroke-dasharray="1" d="M8 62c10-12 22-34 30-52 4 16 8 34 14 50M20 42c10-3 22-4 32-3M54 60C54.5 58 55.7 50.7 57 48C58.3 45.3 60.3 44.2 62 44C63.7 43.8 65.8 44.3 67 47C68.2 49.7 68.2 60 69 60C69.8 60 71.3 47.7 72 47C72.7 46.3 72.2 53.8 73 56C73.8 58.2 75.7 60 77 60C78.3 60 80 58.3 81 56C82 53.7 82.5 45.8 83 46C83.5 46.2 83 54.8 84 57C85 59.2 87.5 60.5 89 59C90.5 57.5 91.7 50.3 93 48C94.3 45.7 96.8 44.7 97 45C97.2 45.3 93.8 48.5 94 50C94.2 51.5 97.7 52.5 98 54C98.3 55.5 97.3 58 96 59C94.7 60 89.2 60.3 90 60C90.8 59.7 98.3 60.3 101 57C103.7 53.7 104.7 45.7 106 40C107.3 34.3 108.8 27.2 109 23C109.2 18.8 108 15.8 107 15C106 14.2 103.7 15.5 103 18C102.3 20.5 102.8 23 103 30C103.2 37 103.3 56.7 104 60C104.7 63.3 105.7 52.3 107 50C108.3 47.7 110.5 46.2 112 46C113.5 45.8 115.2 46.7 116 49C116.8 51.3 115.8 58.7 117 60C118.2 61.3 120.2 58.5 123 57C125.8 55.5 130.2 52.7 134 51C137.8 49.3 144 47.7 146 47"/>
+              <path class="draw__path draw__path--2" pathLength="1" stroke-dasharray="1" d="M14 72c40-6 90-8 150-14 14-1 26-4 40-10"/>
+            </svg>
+          </div>
+
+          <ul class="socials" aria-label="Find me online">
+            <li class="socials__email">
+              <a href="mailto:anush@example.com" data-config-email><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg><span data-config-email-text>anush@example.com</span></a>
+              <button class="copy-btn" type="button" data-copy-email aria-label="Copy email address"><svg class="ico" aria-hidden="true"><use href="#i-copy"/></svg><span class="copy-btn__label">copy</span></button>
+            </li>
+            <li><a href="https://www.linkedin.com/" data-social="linkedin" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-linkedin"/></svg><span>LinkedIn</span></a></li>
+            <li><a href="https://github.com/" data-social="github" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-github"/></svg><span>GitHub</span></a></li>
+            <li><a href="https://dribbble.com/" data-social="dribbble" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-dribbble"/></svg><span>Dribbble</span></a></li>
+            <li><a href="https://www.instagram.com/" data-social="instagram" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-instagram"/></svg><span>Instagram</span></a></li>
+          </ul>
+        </article>
+
+        <div class="postcard pop" style="--d:.25s">
+          <div class="postcard__paper">
+            <div class="postcard__stamp" aria-hidden="true">
+              <span class="postcard__stamp-art"><svg><use href="#d-sun"/></svg></span>
+              <span class="postcard__stamp-val">₹ 5</span>
+            </div>
+            <span class="postcard__postmark" aria-hidden="true">SKETCHBOOK · NO. 06 · POST</span>
+            <h3 class="postcard__title">Send me a postcard <svg class="ico" aria-hidden="true"><use href="#i-send"/></svg></h3>
+            <p class="postcard__sub hand">I usually reply within a day or two ✿</p>
+
+            <form class="contact-form" id="contact-form" name="contact" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+              <input type="hidden" name="form-name" value="contact">
+              <p class="visually-hidden" aria-hidden="true">
+                <label>Leave this empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+              </p>
+
+              <div class="field-row">
+                <div class="field">
+                  <label for="cf-name">Your name</label>
+                  <input id="cf-name" name="name" type="text" autocomplete="name" required minlength="2" maxlength="80" placeholder="Ada Lovelace" aria-describedby="cf-name-err">
+                  <span class="field__line" aria-hidden="true"></span>
+                  <p class="field__error hand" id="cf-name-err" aria-live="polite"></p>
+                </div>
+                <div class="field">
+                  <label for="cf-email">Email</label>
+                  <input id="cf-email" name="email" type="email" autocomplete="email" required maxlength="120" placeholder="ada@example.com" aria-describedby="cf-email-err">
+                  <span class="field__line" aria-hidden="true"></span>
+                  <p class="field__error hand" id="cf-email-err" aria-live="polite"></p>
+                </div>
+              </div>
+              <div class="field">
+                <label for="cf-subject">Subject</label>
+                <input id="cf-subject" name="subject" type="text" required minlength="3" maxlength="120" placeholder="A website for my bakery" aria-describedby="cf-subject-err">
+                <span class="field__line" aria-hidden="true"></span>
+                <p class="field__error hand" id="cf-subject-err" aria-live="polite"></p>
+              </div>
+              <div class="field field--message">
+                <label for="cf-message">Message <span class="field__count" id="cf-count" aria-live="off">0 / 2000</span></label>
+                <textarea id="cf-message" name="message" rows="4" required minlength="10" maxlength="2000" placeholder="Tell me a little about your idea…" aria-describedby="cf-message-err cf-count"></textarea>
+                <p class="field__error hand" id="cf-message-err" aria-live="polite"></p>
+              </div>
+
+              <div class="form-foot">
+                <button class="btn btn--ink btn--send" type="submit">
+                  <span class="btn__label">Send it</span>
+                  <svg class="ico btn__plane" aria-hidden="true"><use href="#i-send"/></svg>
+                  <span class="btn__spinner" aria-hidden="true"></span>
+                </button>
+                <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+              </div>
+            </form>
+
+            <div class="sent-stamp" aria-hidden="true"><span>sent ✓</span><small>with love</small></div>
+          </div>
+        </div>
+
+        <p class="the-end hand reveal" style="--d:.8s" aria-hidden="true">~ the end (for now) ~</p>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<!-- Bottom navigation dock -->
+<div class="dock" role="group" aria-label="Page navigation">
+  <button class="dock__btn dock__prev" type="button" aria-label="Previous page" data-sketch="circle" data-sketch-pad="1" data-sketch-seed="prev" data-sketch-passes="1">
+    <svg class="ico" aria-hidden="true"><use href="#i-arrow-l"/></svg>
+  </button>
+  <div class="dock__status">
+    <p class="dock__count"><span class="dock__num">01</span> <span class="dock__of">/ 06</span></p>
+    <p class="dock__title hand">Hello</p>
+    <span class="dock__bar" aria-hidden="true"><span class="dock__fill"></span></span>
+  </div>
+  <button class="dock__btn dock__next" type="button" aria-label="Next page" data-sketch="circle" data-sketch-pad="1" data-sketch-seed="next" data-sketch-passes="1">
+    <svg class="ico" aria-hidden="true"><use href="#i-arrow-r"/></svg>
+  </button>
+</div>
+<p class="visually-hidden" id="sr-status" aria-live="polite"></p>
+
+<!-- Project case-study dialog -->
+<dialog class="case" id="case" aria-labelledby="case-title">
+  <div class="case__sheet">
+    <button class="case__close" type="button" aria-label="Close project" data-close-case>
+      <svg class="ico" aria-hidden="true"><use href="#i-close"/></svg>
+    </button>
+    <div class="case__media" data-sketch="box" data-sketch-seed="case-media"></div>
+    <div class="case__body">
+      <p class="case__no hand"></p>
+      <p class="case__cat"></p>
+      <h2 class="case__title" id="case-title"></h2>
+      <p class="case__desc"></p>
+      <ul class="tags case__tags" aria-label="Technologies used"></ul>
+      <div class="case__details"></div>
+      <div class="case__nav">
+        <button class="btn-sketch" type="button" data-case-step="-1" data-sketch="box" data-sketch-seed="cprev" data-sketch-passes="1"><svg class="ico" aria-hidden="true"><use href="#i-arrow-l"/></svg> Previous</button>
+        <button class="btn-sketch" type="button" data-case-step="1" data-sketch="box" data-sketch-seed="cnext" data-sketch-passes="1">Next project <svg class="ico" aria-hidden="true"><use href="#i-arrow-r"/></svg></button>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<div class="buddy" aria-hidden="true"><span class="buddy__dot"></span><span class="buddy__label hand"></span></div>
+<div class="doodle-tip hand" role="tooltip" id="doodle-tip" hidden></div>
+
+<script src="js/config.js" defer></script>
+<script src="js/sketch.js" defer></script>
+<script src="js/horizontal-scroll.js" defer></script>
+<script src="js/journey-path.js" defer></script>
+<script src="js/interactions.js" defer></script>
+<script src="js/contact-form.js" defer></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>

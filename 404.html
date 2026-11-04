@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page not found · Anush's sketchbook</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#F6F1E7">
+  <link rel="icon" href="/anush-portfolio/assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=DM+Sans:wght@400;500&family=Space+Grotesk:wght@700&display=swap">
+  <style>
+    :root { --paper: #F6F1E7; --ink: #24231F; --pencil: #67625A; --orange: #EE7F45; --yellow: #F3D77B; }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; }
+    body {
+      display: grid; place-items: center; padding: 24px; text-align: center;
+      background: var(--paper) radial-gradient(circle at 1px 1px, rgba(36, 35, 31, .13) 1px, transparent 1.4px) 0 0 / 24px 24px;
+      color: var(--ink); font: 400 1rem/1.6 'DM Sans', system-ui, sans-serif;
+    }
+    .page { max-width: 520px; }
+    .num { font: 700 clamp(5rem, 22vw, 9rem)/1 'Space Grotesk', sans-serif; letter-spacing: -.06em; position: relative; display: inline-block; }
+    .num svg { position: absolute; left: -6%; top: -8%; width: 112%; height: 116%; overflow: visible; fill: none; stroke: var(--orange); stroke-width: 3; stroke-linecap: round; }
+    h1 { font: 700 2.4rem/1.1 'Caveat', cursive; margin: 14px 0 8px; }
+    p { color: var(--pencil); margin: 0 0 26px; }
+    a {
+      display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 14px 24px;
+      background: var(--ink); color: var(--paper); text-decoration: none; font: 700 1rem/1 'Space Grotesk', sans-serif;
+      border-radius: 14px 22px 16px 24px / 22px 14px 24px 16px; box-shadow: 4px 5px 0 var(--orange);
+      transition: transform .3s cubic-bezier(.34, 1.56, .64, 1), box-shadow .3s;
+    }
+    a:hover { transform: translate(-2px, -3px) rotate(-.8deg); box-shadow: 7px 9px 0 var(--orange); }
+    a:focus-visible { outline: 2.5px dashed #B04A1A; outline-offset: 4px; }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="num" aria-hidden="true">404
+      <svg viewBox="0 0 300 160"><path d="M40 30C110-6 250 6 286 60 318 110 230 158 140 152 50 146-4 110 10 66 18 40 50 22 96 14"/></svg>
+    </div>
+    <h1>Oops — this page got lost in the sketchbook.</h1>
+    <p>Maybe it was erased, or maybe it was never drawn. Let's flip back to the first page.</p>
+    <a href="/anush-portfolio/">← Back to the sketchbook</a>
+  </main>
+</body>
+</html>

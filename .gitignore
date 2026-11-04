@@ -1,0 +1,9 @@
+# OS / editor clutter
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+
+# Original high-res source photo — the site uses the optimised copies in assets/images/
+anush-kr-portrait.png
+anush-kr-portrait.webp
